@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" href="index.html">Cha Do Raku</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="modifierUtilisateur.html">Mon Compte</a></li>
+                <li><a href="gestion.html">Gestion</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="enregistrement.html">S'inscrire</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="#">Déconnexion</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="page-header" id="pageHeader">
+            <h3 class="tpad">ENREGISTREMENT</h3>
+        </div>
+        <div class="row">
+            <form id="formEnregistrer" action="" enctype="" method="POST">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="form-group">
+                        <label for="courriel">Courriel</label>
+                        <input class="form-control input-lg" type="text" id="courriel" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="motPasse">Mot de passe</label>
+                        <input class="form-control input-lg" type="text" id="motPasse" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input class="form-control input-lg" type="text" id="nom" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input class="form-control input-lg" type="text" id="prenom" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input class="form-control input-lg" type="text" id="telephone" value="">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="appartement">Appartement</label>
+                        <input class="form-control input-lg" type="text" id="appartement" value="">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="noCivique">No civique</label>
+                        <input class="form-control input-lg" type="text" id="noCivique" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="form-group">
+                        <label for="rue">Rue</label>
+                        <input class="form-control input-lg" type="text" id="rue" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="ville">Ville</label>
+                        <input class="form-control input-lg" type="text" id="ville" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-2">
+                    <div class="form-group">
+                        <label for="codePostal">Code postal</label>
+                        <input class="form-control input-lg" type="text" id="codePostal" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="pays">Pays</label>
+                        <input class="form-control input-lg" type="text" id="pays" value="">
+                    </div>
+                </div>
+                <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">
+                    <button class="btn btn-primary margin-bottom-none" type="submit">S'enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
