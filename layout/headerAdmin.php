@@ -8,7 +8,9 @@
     <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../css/style.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <script src="../js/script.js"></script>   
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -19,16 +21,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Cha Do Raku</a>
+            <a class="navbar-brand" href="../index.php">Cha Do Raku</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="../index.php">Accueil</a></li>               
-                <li><a href="gestion.php">Gestion</a></li>
+                <li id="gestion"><a href="gestion.php">Gestion</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><?php echo (isset($_SESSION["SESS_courriel"]) ? $_SESSION["SESS_courriel"] : ''); ?></a></li>                
-                <li><a href="deconnexion.php">Déconnexion</a></li>
+                <li><a href="#" id="verifSess"><?php echo (isset($_SESSION["SESS_courriel"]) ? $_SESSION["SESS_courriel"] : ''); ?></a></li>  
+                <li><a href="#" id="verifAdmin"><?php echo ((isset($_SESSION["SESS_categorie"])&& ($_SESSION["SESS_categorie"]) == 'admin') ? 'admin' : 'client'); ?></a></li>              
+                <li id="deconnex"><a href="deconnexion.php"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>&nbsp; Déconnexion</a></li>
             </ul>
         </div>
     </nav>
