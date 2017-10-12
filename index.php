@@ -37,8 +37,7 @@
         </div>       
     </div>
     <!--Carousel End -->
-    <div class="intro-block-matcha">
-
+    <div class="intro-block">
         <div class="container">
             <div class="row">
                 <div class="col-xs-3">
@@ -60,7 +59,7 @@
         </div>
         <div class="row">
             <div class="col-sm-6 col-md-3">
-                <img class="img-circle img-responsive" src="images/matcha.jpg">
+               <a href="php/matcha.php"> <img class="img-circle img-responsive" src="images/matcha.jpg" > </a>
                 <h3>Matcha</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <p><a class="btn btn-default" href="php/matcha.php">Voir la sélection &raquo;</a></p>
