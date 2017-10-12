@@ -36,14 +36,9 @@
             </div>
         </div>       
     </div>
-<<<<<<< HEAD
-
     <!--Carousel End -->
     <div class="intro-block-matcha">
-=======
-   
-    <div class="intro-block">
->>>>>>> b159ea7a92bc1fae73e30e88ceda49b91dba601e
+
         <div class="container">
             <div class="row">
                 <div class="col-xs-3">

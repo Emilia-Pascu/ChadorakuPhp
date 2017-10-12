@@ -272,12 +272,10 @@ td {
     margin-top: 10px;
 }
 
-<<<<<<< HEAD
 @font-face {
     font-family: japonais;
     src: url(../ZinHenaBokuryu-CRF.otf);
 }
-=======
 #verifAdmin {
     display: none;
 }
@@ -298,4 +296,3 @@ td {
     border: transparent;
     background-color: transparent;
 }*/
->>>>>>> b159ea7a92bc1fae73e30e88ceda49b91dba601e
