@@ -269,8 +269,7 @@ td {
     text-decoration: none;
 }
 
-
-/*.alert-success {
+.alert-success {
     border: transparent;
     background-color: transparent;
-}*/
+}
