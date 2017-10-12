@@ -149,8 +149,7 @@
             $('.carousel').carousel({
                 interval: 4000
             });
-        })
-        verifierSess();
+        })       
     </script>
 </body>
 </html>

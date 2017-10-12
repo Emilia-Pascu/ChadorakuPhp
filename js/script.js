@@ -31,3 +31,18 @@
         }
     }
 }*/
+
+function cssAlert() {
+    var divAlert = document.getElementsByClassName("alert-success");
+    if (divAlert) {
+        for (var i = 0; i < divAlert.length; i++) {
+            var divAlertText = divAlert[i].textContent;
+            alert(divAlertText);
+            if (divAlertText.length === 0) {
+                divAlert[i].style.display = 'none';
+            } else {
+                divAlert[i].style.display = 'inline-block';
+            }
+        }
+    }
+}

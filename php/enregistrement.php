@@ -70,7 +70,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <a href="#" class="active" id="login-form-link"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;  ENREGISTREMENT</a>
+                                    <a href="#" class="active" id="login-form-link"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; INFORMATIONS PERSONNELLES</a>
                                 </div>
                             </div>
                             <hr>
@@ -78,67 +78,79 @@
                         <div class="panel-body">
                             <div class="row">
                                 <form id="formEnregistrer" action="" enctype="" method="POST">
-                                    <div class="col-sm-4 col-sm-offset-2">
+                                    <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="courriel">Courriel</label>
+                                            <label for="courriel"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Courriel</label>
                                             <input class="form-control input-lg" type="text" id="courriel" name="courriel" value="">
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label for="motPasse">Mot de passe</label>
-                                            <input class="form-control input-lg" type="text" id="motPasse" name="motPasse" value="">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 col-sm-offset-2">
-                                        <div class="form-group">
-                                            <label for="nom">Nom</label>
+                                            <label for="nom"> <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Nom</label>
                                             <input class="form-control input-lg" type="text" id="nom" name="nom" value="">
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="prenom">Prénom</label>
+                                            <label for="motPasse"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Mot de passe</label>
+                                            <input class="form-control input-lg" type="text" id="motPasse" name="motPasse" value="">
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label for="prenom"> <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Prénom</label>
                                             <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="">
                                         </div>
                                     </div>
-                                    <div class="col-sm-4 col-sm-offset-2">
+                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="telephone">Téléphone</label>
-                                            <input class="form-control input-lg" type="text" id="telephone" name="telephone" value="">
-                                        </div>
+                                            <label for="confMotPasse"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Confirmer mot de passe</label>
+                                            <input class="form-control input-lg" type="text" id="confMotPasse" name="confMotPasse" value="">
+                                        </div>                                        
                                     </div>
-                                    <div class="col-sm-2">
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label for="telephone"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Téléphone</label>
+                                            <input class="form-control input-lg" type="text" id="telephone" name="telephone" value="">
+                                        </div>                                        
+                                    </div>                                    
+                                    <div class="col-sm-2 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="appartement">App</label>
                                             <input class="form-control input-lg" type="text" id="appartement" name="appartement" value="">
                                         </div>
                                     </div>
-                                    <div class="col-sm-2">
+                                    <div class="col-sm-3">
                                         <div class="form-group">
                                             <label for="noCivique">No</label>
                                             <input class="form-control input-lg" type="text" id="noCivique" name="noCivique" value="">
                                         </div>
                                     </div>
-                                    <div class="col-sm-4 col-sm-offset-2">
+                                    <div class="col-sm-5">
                                         <div class="form-group">
                                             <label for="rue">Rue</label>
                                             <input class="form-control input-lg" type="text" id="rue" name="rue" value="">
-                                        </div>
+                                        </div>                                        
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="ville">Ville</label>
                                             <input class="form-control input-lg" type="text" id="ville" name="ville" value="">
+                                        </div>                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label for="prenom">Province</label>
+                                            <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="">
                                         </div>
                                     </div>
-                                    <div class="col-sm-4 col-sm-offset-2">
+                                    <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="codePostal">Code postal</label>
                                             <input class="form-control input-lg" type="text" id="codePostal" name="codePostal" value="">
                                         </div>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-5">
                                         <div class="form-group">
                                             <label for="pays">Pays</label>
                                             <input class="form-control input-lg" type="text" id="pays" name="pays" value="">
@@ -147,9 +159,9 @@
                                     <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">
                                         <button class="btn btn-primary margin-bottom-none" type="submit"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; S'ENREGISTRER</button>
                                     </div>
-                                </form>
-                                <span class="error"> <?php echo $message;?></span> 
+                                </form>                                
                             </div>
+                            <div class="col-sm-12 alert alert-success msg" > <?php echo $message;?></div> 
                         </div>
                     </div>
                 </div>
@@ -157,7 +169,7 @@
         </div>
     </div>
     <script>        
-      
+     
     </script>
 </body>
 

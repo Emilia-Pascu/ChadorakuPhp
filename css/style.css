@@ -162,6 +162,8 @@ label {
     font-size: 16px;
     line-height: 1.7;
     text-transform: uppercase;
+    width: 260px;
+    margin: 5px;
 }
 
 .panel-login {
@@ -260,3 +262,15 @@ td {
 #verifAdmin {
     cursor: context-menu;
 }
+
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-header>a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/*.alert-success {
+    border: transparent;
+    background-color: transparent;
+}*/
