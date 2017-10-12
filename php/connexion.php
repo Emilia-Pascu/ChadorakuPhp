@@ -63,7 +63,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <a href="#" class="active" id="login-form-link">CONNEXION</a>
+                                    <a href="#" class="active" id="login-form-link"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; CONNEXION</a>
                                 </div>
                             </div>
                             <hr>
@@ -84,17 +84,20 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">
-                                        <button class="btn btn-primary margin-bottom-none" type="submit">SE CONNECTER</button>
+                                        <button class="btn btn-primary margin-bottom-none" type="submit"> <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; CONNEXION</button>
                                     </div>
-                                </form>
-                                <span class="error"> <?php echo $message;?></span>
+                                </form>                                
                             </div>
+                            <div class="col-sm-12 alert alert-success msg" > <?php echo $message;?></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>        
+        
+    </script>
 </body>
 
 </html>
