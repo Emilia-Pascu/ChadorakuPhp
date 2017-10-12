@@ -81,37 +81,37 @@
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="courriel"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Courriel</label>
-                                            <input class="form-control input-lg" type="text" id="courriel" name="courriel" value="">
+                                            <input class="form-control input-lg" type="email" id="courriel" name="courriel" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label for="nom"> <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Nom</label>
-                                            <input class="form-control input-lg" type="text" id="nom" name="nom" value="">
+                                            <input class="form-control input-lg" type="text" id="nom" name="nom" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="motPasse"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Mot de passe</label>
-                                            <input class="form-control input-lg" type="text" id="motPasse" name="motPasse" value="">
+                                            <input class="form-control input-lg" type="password" id="motPasse" name="motPasse" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label for="prenom"> <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Prénom</label>
-                                            <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="">
+                                            <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="" required>
                                         </div>
                                     </div>
                                      <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="confMotPasse"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Confirmer mot de passe</label>
-                                            <input class="form-control input-lg" type="text" id="confMotPasse" name="confMotPasse" value="">
+                                            <input class="form-control input-lg" type="text" id="confMotPasse" name="confMotPasse" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label for="telephone"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Téléphone</label>
-                                            <input class="form-control input-lg" type="text" id="telephone" name="telephone" value="">
+                                            <input class="form-control input-lg" type="text" id="telephone" name="telephone" value="" required>
                                         </div>                                        
                                     </div>                                    
                                     <div class="col-sm-2 col-sm-offset-1">
@@ -123,37 +123,37 @@
                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label for="noCivique">No</label>
-                                            <input class="form-control input-lg" type="text" id="noCivique" name="noCivique" value="">
+                                            <input class="form-control input-lg" type="text" id="noCivique" name="noCivique" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label for="rue">Rue</label>
-                                            <input class="form-control input-lg" type="text" id="rue" name="rue" value="">
+                                            <input class="form-control input-lg" type="text" id="rue" name="rue" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="ville">Ville</label>
-                                            <input class="form-control input-lg" type="text" id="ville" name="ville" value="">
+                                            <input class="form-control input-lg" type="text" id="ville" name="ville" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label for="prenom">Province</label>
-                                            <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="">
+                                            <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="codePostal">Code postal</label>
-                                            <input class="form-control input-lg" type="text" id="codePostal" name="codePostal" value="">
+                                            <input class="form-control input-lg" type="text" id="codePostal" name="codePostal" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
                                             <label for="pays">Pays</label>
-                                            <input class="form-control input-lg" type="text" id="pays" name="pays" value="">
+                                            <input class="form-control input-lg" type="text" id="pays" name="pays" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">

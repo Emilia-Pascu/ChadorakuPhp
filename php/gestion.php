@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <p>
-                <a href="ajouterThe.html" class="btn btn-success">Ajouter</a>
+                <a href="ajouterThe.php" class="btn btn-success">Ajouter</a>
             </p>
             <table class="table">
                 <thead>

@@ -15,7 +15,7 @@
     <script src="../js/script.js"></script> 
     <title>CHA DO RAKU</title>         
 </head>
-<body onload="cssAlert()">
+<body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
