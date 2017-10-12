@@ -11,7 +11,9 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Abel', sans-serif;
+    /* font-family: 'Abel', sans-serif; */
+    font-family: 'japonais';
+    text-transform: uppercase;
 }
 
 b,
@@ -43,8 +45,19 @@ strong {
     /* opacity: 0.2; */
     padding: 60px 15px 60px;
     margin: 15px 8px 15px 8px;
+    color: #110802;
+}
+
+.matcha {
+    background: url(../images/cloud_pattern_03.jpg) repeat;
+    /* background: url(../images/The_Great_Wave_off_Kanagawa.jpg); */
+    /* min-width: 100%; */
+    /* opacity: 0.2; */
+    padding: 60px 15px 60px;
+    margin: 15px 8px 15px 8px;
     color: #110202;
 }
+
 
 .text-muted {
     color: #110D03;
@@ -94,6 +107,11 @@ hr {
 .ftr {
     background: url(../images/cloud_pattern_03.jpg) repeat;
     padding: 20px 0 20px 0;
+}
+
+.ftr-matcha {
+    background: url(../images/cloud_pattern_03.jpg) repeat;
+    padding: 20px 0 0 0;
 }
 
 .ftr address,
@@ -254,6 +272,12 @@ td {
     margin-top: 10px;
 }
 
+<<<<<<< HEAD
+@font-face {
+    font-family: japonais;
+    src: url(../ZinHenaBokuryu-CRF.otf);
+}
+=======
 #verifAdmin {
     display: none;
 }
@@ -274,3 +298,4 @@ td {
     border: transparent;
     background-color: transparent;
 }*/
+>>>>>>> b159ea7a92bc1fae73e30e88ceda49b91dba601e

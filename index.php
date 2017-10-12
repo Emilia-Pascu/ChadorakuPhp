@@ -36,8 +36,14 @@
             </div>
         </div>       
     </div>
+<<<<<<< HEAD
+
+    <!--Carousel End -->
+    <div class="intro-block-matcha">
+=======
    
     <div class="intro-block">
+>>>>>>> b159ea7a92bc1fae73e30e88ceda49b91dba601e
         <div class="container">
             <div class="row">
                 <div class="col-xs-3">
@@ -62,7 +68,7 @@
                 <img class="img-circle img-responsive" src="images/matcha.jpg">
                 <h3>Matcha</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="btn btn-default" href="#">Voir la sélection &raquo;</a></p>
+                <p><a class="btn btn-default" href="php/matcha.php">Voir la sélection &raquo;</a></p>
             </div>
             <div class="col-sm-6 col-md-3">
                 <img class="img-circle img-responsive" src="images/sencha.jpg">
