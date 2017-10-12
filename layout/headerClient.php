@@ -24,7 +24,7 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php">Accueil</a></li>
-                <li><a href="php/modifierUtilisateur.php">Mon Compte</a></li> 
+                <li><a href="php/modifierUtilisateur.php"><?php echo ((isset($_SESSION["SESS_categorie"])) ? 'Mon compte' : ''); ?></a></li> 
                  <li><a href="php/gestion.php"><?php echo ((isset($_SESSION["SESS_categorie"]) && ($_SESSION["SESS_categorie"]) == 'admin') ? 'Gestion' : ''); ?></a></li>               
             </ul>
             <ul class="nav navbar-nav navbar-right">
