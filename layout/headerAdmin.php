@@ -29,7 +29,16 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="../index.php">ACCUEIL</a></li>               
-                <li id="gestion"><a href="gestion.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; GESTION</a></li>
+                <li id="gestion"><a href="gestion.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; TOUS LES THÉS</a></li>
+                <li class="dropdown" >
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="dropCategorieAdmin" href="#">CATÉGORIES <span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="menuCategorieAdmin">
+                        <li><a href="#">Matcha</a></li>
+                        <li><a href="#">Sencha</a></li>
+                        <li><a href="#">Gyokuro</a></li>
+                        <li><a href="#">Hojicha</a></li>                       
+                    </ul>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" id="verifSess"><?php echo (isset($_SESSION["SESS_courriel"]) ? $_SESSION["SESS_courriel"] : ''); ?></a></li>  

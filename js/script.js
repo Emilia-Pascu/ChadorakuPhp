@@ -1,3 +1,35 @@
+$(document).ready(function() {
+    $('#menuCategorie li a').click(function() {
+        var valueCategorie = $(this).text();
+        sendForm(valueCategorie);
+        // window.location.href = "index.php?categorie=" + valueCategorie;
+        $('#dropCategorie').html(valueCategorie + ' <span class="caret"></span>');
+
+    });
+
+
+    $('#menuCategorieAdmin li a').click(function() {
+        var valueCategorieAdmin = $(this).text();
+        sendForm(valueCategorieAdmin);
+        // window.location.href = "indexAdmin.php?categorie=" + valueCategorieAdmin;
+        $('#dropCategorieAdmin').html(valueCategorieAdmin + ' <span class="caret"></span>');
+
+    });
+
+    $('#menuGestion li a').click(function() {
+        var valueGestion = $(this).text();
+        // alert(valueGestion);
+        $('#dropGestion').html(valueGestion + ' <span class="caret"></span>');
+    });
+
+
+});
+
+function sendForm(categorie) {
+    $("#inputCategorie").val(categorie);
+    $('#formAction').submit();
+}
+
 /*function verifierSess() {
     var monCompte = document.getElementById("monCompte");
     var gestion = document.getElementById("gestion");
