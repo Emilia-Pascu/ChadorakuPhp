@@ -1,32 +1,29 @@
 <?php
     session_start(); 
     require_once("../BD/connexion.inc.php");
-    require '../layout/headerAdmin.php';
+    require '../layout/headerSimple.php';
 
-    if ( !empty($_POST)) {
-    require_once("../BD/connexion.inc.php");
+    if ( !empty($_POST)) {    
     global $connexion;
-	$titreFilm=$_POST['titreFilm'];
-    $realisateurFilm=$_POST['realisateurFilm'];
-    $categorieFilm=$_POST['categorieFilm'];
-	$dureeFilm=$_POST['dureeFilm'];
-    $prixFilm=$_POST['prixFilm'];
-    $urlFilm = $_POST['urlFilm'];
+	$nom=$_POST['nom'];
+    $description=$_POST['description'];
+    $prix=$_POST['prix'];
+	$categorie=$_POST['categorie'];    
 	$rep="../pochette/";
 	$nomFichier="avatar.jpg";
-	if($_FILES['pochetteFilm']['tmp_name']!==""){
+	if($_FILES['image']['tmp_name']!==""){
 		//Upload de la photo
-		$tmp = $_FILES['pochetteFilm']['tmp_name'];
-		$fichier= $_FILES['pochetteFilm']['name'];
+		$tmp = $_FILES['image']['tmp_name'];
+		$fichier= $_FILES['image']['name'];
 		$extension=strrchr($fichier,'.');
-		$nomFichier=sha1($titreFilm.time()).$extension;//générer un nom de film
+		$nomFichier=sha1($nom.time()).$extension;//générer un nom de film
 		@move_uploaded_file($tmp,$rep.$nomFichier);
 		// Enlever le fichier temporaire chargé
 		@unlink($tmp); //effacer le fichier temporaire
 	}
-	$requete="INSERT INTO film values(0,?,?,?,?,?,?,?)";
+	$requete="INSERT INTO produit values(0,?,?,?,?,?)";
 	$stmt = $connexion->prepare($requete);
-	$stmt->bind_param("sssidss", $titreFilm,$realisateurFilm,$categorieFilm,$dureeFilm,$prixFilm,$nomFichier,$urlFilm);
+	$stmt->bind_param("ssdss", $nom,$description,$prix,$nomFichier,$categorie);
 	$stmt->execute();
     @mysqli_close($connexion);
     header("Location: gestion.php");
@@ -70,11 +67,23 @@
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="categorie">Catégorie thé</label>
-                                            <input class="form-control input-lg" type="text" id="description" name="description" value="" required>
+                                            <select class="form-control input-lg" id="categorie" name="categorie" required>
+                                                <option value="" disabled selected hidden>Toutes les catégories de thé</option>
+                                                <option value="Matcha">Matcha</option>
+                                                <option value="Sencha">Sencha</option>
+                                                <option value="Gyokuro">Gyokuro</option>
+                                                <option value="Hojicha">Hojicha</option>                                                
+                                            </select>                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">  
+                                            <label for="image">Image thé</label>                                          
+                                            <input type="file" id="image" name="image">                                             
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">
-                                        <button class="btn btn-primary margin-bottom-none" type="submit"> <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; CONNEXION</button>
+                                        <button class="btn btn-primary margin-bottom-none" type="submit"> <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; AJOUTER</button>
                                     </div>
                                 </form>                                
                             </div>                           
