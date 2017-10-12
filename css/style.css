@@ -58,7 +58,6 @@ strong {
     color: #110202;
 }
 
-
 .text-muted {
     color: #110D03;
     font-weight: 900;
@@ -276,6 +275,7 @@ td {
     font-family: japonais;
     src: url(../ZinHenaBokuryu-CRF.otf);
 }
+
 #verifAdmin {
     display: none;
 }
@@ -296,4 +296,10 @@ td {
     background-color: transparent;
 }
 
-
+#image {
+    height: 36px;
+    border: none;
+    color: #666;
+    vertical-align: middle;
+    font-size: 16px;
+}
