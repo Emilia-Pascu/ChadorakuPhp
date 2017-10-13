@@ -59,29 +59,29 @@
         </div>
         <div class="row">
             <div class="col-sm-6 col-md-3">
-               <a href="php/matcha.php"> <img class="img-circle img-responsive" src="images/matcha.jpg" > </a>
+               <a href="php/listeProduits.php?categorie='Matcha'"> <img class="img-circle img-responsive" src="images/matcha.jpg" > </a>
                 <h3>Matcha</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="btn btn-default" href="php/matcha.php">Voir la sélection &raquo;</a></p>
+                <p><a class="btn btn-default" href="php/listeProduits.php?categorie='Matcha'">Voir la sélection &raquo;</a></p>
             </div>
             <div class="col-sm-6 col-md-3">
-                <img class="img-circle img-responsive" src="images/sencha.jpg">
+                <a href="php/listeProduits.php?categorie='Sencha'"> <img class="img-circle img-responsive" src="images/sencha.jpg"></a>
                 <h3>Sencha</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="btn btn-default" href="#">Voir la sélection &raquo;</a></p>
+                <p><a class="btn btn-default" href="php/listeProduits.php?categorie='Sencha'">Voir la sélection &raquo;</a></p>
             </div>
             <div class="clearfix hidden-md hidden-lg"></div>
             <div class="col-sm-6 col-md-3">
-                <img class="img-circle img-responsive" src="images/gyokuro.jpg">
+                <a href="php/listeProduits.php?categorie='Gyokuro'"> <img class="img-circle img-responsive" src="images/gyokuro.jpg"></a>
                 <h3>Gyokuro</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="btn btn-default" href="#">Voir la sélection &raquo;</a></p>
+                <p><a class="btn btn-default" href="php/listeProduits.php?categorie='Gyokuro'">Voir la sélection &raquo;</a></p>
             </div>
             <div class="col-sm-6 col-md-3">
-                <img class="img-circle img-responsive" src="images/hojicha.jpg">
+                <a href="php/listeProduits.php?categorie='Hojicha'"> <img class="img-circle img-responsive" src="images/hojicha.jpg"></a>
                 <h3>Hojicha</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="btn btn-default" href="#">Voir la sélection &raquo;</a></p>
+                <p><a class="btn btn-default" href="php/listeProduits.php?categorie='Hojicha'">Voir la sélection &raquo;</a></p>
             </div>
         </div>
     </div>   
@@ -142,8 +142,7 @@
             </div>
         </div>
     </div>   
-    <script src="js/jquery.js"></script>   
-    <script src="js/bootstrap.min.js"></script>
+   
     <script>
         $(function() {
             $('.carousel').carousel({

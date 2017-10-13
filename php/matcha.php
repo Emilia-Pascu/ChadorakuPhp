@@ -3,6 +3,11 @@
     require_once("../BD/connexion.inc.php");
     require '../layout/headerSimple.php';
 ?>
+
+<form id= "formAction" name= "formAction"  action= "" method="POST">
+    <input type="hidden" value="" id="inputCategorie" name="categorie">           
+</form>
+
 <div class="ftr-matcha">
         <div class="container">
             <div class="row">

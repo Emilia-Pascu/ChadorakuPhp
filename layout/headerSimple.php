@@ -29,6 +29,15 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="../index.php">ACCUEIL</a></li>   
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="dropCategorie" href="#">CATÉGORIES <span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="menuCategorie">
+                        <li><a href="../php/listeProduits.php?categorie='Matcha'">Matcha</a></li>
+                        <li><a href="../php/listeProduits.php?categorie='Sencha'">Sencha</a></li>
+                        <li><a href="../php/listeProduits.php?categorie='Gyokuro'">Gyokuro</a></li>
+                        <li><a href="../php/listeProduits.php?categorie='Hojicha'">Hojicha</a></li>                                 
+                    </ul>
+                </li>
                 <li id="monCompte"><a href="../php/modifierUtilisateur.php"><?php echo ((isset($_SESSION["SESS_categorie"])&& ($_SESSION["SESS_categorie"]) == 'client') ? '<i class="fa fa-user" aria-hidden="true"></i>&nbsp; MON COMPTE' : ''); ?></a></li>                          
             </ul>
             <ul class="nav navbar-nav navbar-right">

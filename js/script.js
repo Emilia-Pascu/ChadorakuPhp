@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    $('#menuCategorie li a').click(function() {
+    /*$('#menuCategorie li a').click(function() {
         var valueCategorie = $(this).text();
         sendForm(valueCategorie);
         // window.location.href = "index.php?categorie=" + valueCategorie;
         $('#dropCategorie').html(valueCategorie + ' <span class="caret"></span>');
 
-    });
+    });*/
 
 
     $('#menuCategorieAdmin li a').click(function() {
