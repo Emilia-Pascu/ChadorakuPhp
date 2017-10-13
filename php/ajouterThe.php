@@ -84,6 +84,7 @@
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">
                                         <button class="btn btn-primary margin-bottom-none" type="submit"> <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; AJOUTER</button>
+                                        <a class="btn btn-danger" href="gestion.php">Annuler</a> 
                                     </div>
                                 </form>                                
                             </div>                           

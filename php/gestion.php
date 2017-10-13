@@ -34,7 +34,7 @@
             $listeFilms=mysqli_query($connexion,$requete);
             while($ligne=mysqli_fetch_object($listeFilms)){
                 $rep.="<tr><td><img src='".$dossier.$ligne->image."' width='40'></td><td><span>".$ligne->nom."</span></td><td class='descrip'>".$ligne->description."</td><td>".$ligne->categorie."</td><td>".$ligne->prix."</td>";
-                $rep.='<td>'.'<a class="btn btn-success" href="modifier.php?idProduit='.$ligne->idProduit.'">Modifier</a>'.' ';
+                $rep.='<td>'.'<a class="btn btn-success" href="modifierThe.php?idProduit='.$ligne->idProduit.'">Modifier</a>'.' ';
                 $rep.='<a class="btn btn-danger" href="supprimer.php?idProduit='.$ligne->idProduit.'">Supprimer</a>'.'</td></tr>';
             }
             mysqli_free_result($listeFilms);
