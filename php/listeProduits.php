@@ -63,7 +63,7 @@
     }finally {
         $rep.="</div>";
         echo $rep;
-        //echo $categorie;
+        // echo $categorie;
     }            
     @mysqli_close($connexion);          
     ?>
