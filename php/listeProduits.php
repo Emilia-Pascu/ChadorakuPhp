@@ -10,15 +10,30 @@
 
 <?php
     global $connexion;                    
-    $rep = "";
+    $rep = "";     
+    $rep.='<div class="ftr-matcha">';
+    $rep.= '<div class="container">';
+    $rep.= '<div class="row"><div class="col-xs-12">';
+    
     if(!empty($_GET["categorie"])){
         $categorie = $_REQUEST['categorie'];
         $requete="SELECT * FROM produit WHERE categorie = ".$categorie;
+        //entête
+   
+    $rep.= '<h1 class="text-muted">'.$categorie.'</h1>';
+    $rep.='<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div></div></div>';
+    //fin entête
     }else{
-        $requete="SELECT * FROM produit ORDER BY idProduit DESC";    
+        $requete="SELECT * FROM produit ORDER BY idProduit DESC";
+        //entête   
+    $rep.= '<h1 class="text-muted">Tous nos Thés</h1>';
+    $rep.='<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div></div></div>';
+    //fin entête    
     }  
                                  
     $dossier="../pochette/";
+    
+
     try{
         $listeFilms=mysqli_query($connexion,$requete);
         $rows=mysqli_num_rows($listeFilms);// nb total d'enregistrements de la base des données
@@ -32,7 +47,10 @@
             $col_class = 'col-sm-3'; // classe col
             
             $rep.= '<div class="'.$container_class.'">';    // ouvrir conteneur
-            while($ligne=mysqli_fetch_object($listeFilms)){                                
+            // $ligne=mysqli_fetch_object($listeFilms);
+            
+            while($ligne=mysqli_fetch_object($listeFilms)){
+                                                
                 if(($counter % $cols) == 1) {    // vérifier si on a un row nouveau
                     $rep.= '<div class="'.$row_class.'">';	// commence row nouveau
                 }
