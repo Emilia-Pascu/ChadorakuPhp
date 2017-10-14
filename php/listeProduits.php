@@ -22,6 +22,13 @@
    
     $rep.= '<h1 class="text-muted">'.$categorie.'</h1>';
     $rep.='<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div></div></div>';
+    $rep.='<div class="container padded">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Notre sélection de'.$categorie.'</h2>
+            <hr>
+        </div>
+    </div>';
     //fin entête
     }else{
         $requete="SELECT * FROM produit ORDER BY idProduit DESC";
@@ -55,8 +62,8 @@
                     $rep.= '<div class="'.$row_class.'">';	// commence row nouveau
                 }
                 $rep.='<div class="'.$col_class.'"><form method="post" id="fProd" name="fProd" action="panier.php?action=add&nom='.$ligne->nom.'">';
-                $rep.='<div class="thumbnail"><a href="detailProduit.php?idProduit='.$ligne->idProduit.'"><img src="'.$dossier.$ligne->image.'"';
-                $rep.=' class="img-responsive" ></a>';               
+                $rep.='<div ><a href="detailProduit.php?idProduit='.$ligne->idProduit.'"><img src="'.$dossier.$ligne->image.'"';
+                $rep.=' class=" img-circle img-responsive" ></a>';               
                 $rep.='<div class="caption"><h5><strong>'.$ligne->nom.'</strong></h5>';
                 $rep.='<h5>'.$ligne->categorie.'</h5><h5><em>$ '.$ligne->prix.'</em></h5>';
                 $rep.='<h5 class="client"><select id="quantite" name="quantite" ><option value="1">1</option><option value="2">2</option>';
