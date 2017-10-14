@@ -132,13 +132,17 @@ $dossier="../pochette/";
 </div>
 
   <?php
+}else{
+    ?>
+<div class="alert alert-info">Votre panier est vide</div>
+<?php
 }
 ?>
 </div>
 <div class="form-group">
     <div class="row">
         <div class="col-sm-4 col-sm-offset-4">
-            <a class="btn btn-success form-control" id="btn-continuer" href="../index.php">Continuer les achats</a>
+            <a class="btn btn-success form-control" id="btn-continuer" href="listeProduits.php">Continuer les achats</a>
         </div>
     </div>
 </div>
