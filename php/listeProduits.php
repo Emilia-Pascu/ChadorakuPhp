@@ -4,15 +4,20 @@
     require '../layout/headerSimple.php';
 ?>
 
-<form id= "formAction" name= "formAction"  action= "" method="POST">
+<!--form id= "formAction" name= "formAction"  action= "" method="POST">
     <input type="hidden" value="" id="inputCategorie" name="categorie">           
-</form>
+</form-->
 
 <?php
     $categorie = $_REQUEST['categorie'];        
     global $connexion;                    
     $rep = "";
-    $requete="SELECT * FROM produit WHERE categorie = ".$categorie; 
+    if(!$categorie){
+        $requete="SELECT * FROM produit ORDER BY idProduit DESC";        
+    }else{
+        $requete="SELECT * FROM produit WHERE categorie = ".$categorie;
+    }
+     
     /*if(!empty($_POST)){
         //$categorie = $_REQUEST['categorie'];
         $requete="SELECT * FROM produit WHERE categorie = '".$categorie."'";                       
@@ -69,9 +74,9 @@
     ?>
         </div> <!-- /container -->
         <script>
-            var categorie = "<?php echo (!empty($_POST) ? $categorie : 'CATÉGORIES'); ?>";           
+           /* var categorie = "<?php echo $categorie; ?>";           
             categorie += ' <span class="caret"></span>';
-            document.getElementById("dropCategorie").innerHTML = categorie; 
+            document.getElementById("dropCategorie").innerHTML = categorie; */
 
             var client = "<?php echo (isset($_SESSION["SESS_courriel"]) ? 'client' : 'visiteur'); ?>";   
             var btnCond = document.getElementsByClassName("client");

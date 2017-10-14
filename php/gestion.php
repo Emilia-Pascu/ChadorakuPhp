@@ -23,7 +23,11 @@
         $rep = "";
         if(!empty($_POST)){
             $categorie = $_REQUEST['categorie'];
-            $requete="SELECT * FROM produit WHERE categorie = '".$categorie."'";                        
+            if ($categorie == 'Tous les produits'){
+                 $requete="SELECT * FROM produit ORDER BY idProduit DESC"; 
+            }else{
+                 $requete="SELECT * FROM produit WHERE categorie = '".$categorie."'";    
+            }                               
         }else{
             $requete="SELECT * FROM produit ORDER BY idProduit DESC";                        
         }                  
@@ -50,9 +54,9 @@
         </div>
     </div>           
       <script>
-            var categorie = "<?php echo (!empty($_POST) ? $categorie : 'CATÉGORIES'); ?>";           
+           /* var categorie = "<?php echo (!empty($_POST) ? $categorie : 'CATÉGORIES'); ?>";           
             categorie += ' <span class="caret"></span>';
-            document.getElementById("dropCategorieAdmin").innerHTML = categorie;        
+            document.getElementById("dropCategorieAdmin").innerHTML = categorie;      */  
         </script>    
 </body>
 
