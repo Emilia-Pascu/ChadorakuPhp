@@ -28,15 +28,16 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="../index.php">ACCUEIL</a></li>               
-                <li id="gestion"><a href="gestion.php"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; TOUS LES THÉS</a></li>
+                <li class="active"><a href="../index.php">ACCUEIL</a></li>                  
                 <li class="dropdown" >
-                    <a class="dropdown-toggle" data-toggle="dropdown" id="dropCategorieAdmin" href="#">CATÉGORIES <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="dropCategorieAdmin" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; CATÉGORIES <span class="caret"></span></a>
                     <ul class="dropdown-menu" id="menuCategorieAdmin">
                         <li><a href="#">Matcha</a></li>
                         <li><a href="#">Sencha</a></li>
                         <li><a href="#">Gyokuro</a></li>
-                        <li><a href="#">Hojicha</a></li>                       
+                        <li><a href="#">Hojicha</a></li> 
+                        <li class="divider"></li>   
+                        <li><a href="#">Tous les produits</a></li>                    
                     </ul>
                 </li>
             </ul>
