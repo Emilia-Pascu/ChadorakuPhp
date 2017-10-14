@@ -9,21 +9,14 @@
 </form-->
 
 <?php
-    $categorie = $_REQUEST['categorie'];        
     global $connexion;                    
     $rep = "";
-    if(!$categorie){
-        $requete="SELECT * FROM produit ORDER BY idProduit DESC";        
-    }else{
+    if(!empty($_GET["categorie"])){
+        $categorie = $_REQUEST['categorie'];
         $requete="SELECT * FROM produit WHERE categorie = ".$categorie;
-    }
-     
-    /*if(!empty($_POST)){
-        //$categorie = $_REQUEST['categorie'];
-        $requete="SELECT * FROM produit WHERE categorie = '".$categorie."'";                       
     }else{
-        //$requete="SELECT * FROM film ORDER BY idFilm DESC";                        
-    }  */     
+        $requete="SELECT * FROM produit ORDER BY idProduit DESC";    
+    }  
                                  
     $dossier="../pochette/";
     try{
