@@ -4,19 +4,13 @@
     require '../layout/headerSimple.php';
 ?>
 
-<!--form id= "formAction" name= "formAction"  action= "" method="POST">
-    <input type="hidden" value="" id="inputCategorie" name="categorie">           
-</form-->
-
 <?php
     global $connexion;                    
     $rep = "";
-    if(!empty($_GET["categorie"])){
-        $categorie = $_REQUEST['categorie'];
-        $requete="SELECT * FROM produit WHERE categorie = ".$categorie;
-    }else{
-        $requete="SELECT * FROM produit ORDER BY idProduit DESC";    
-    }  
+    if(!empty($_GET["idProduit"])){
+        $idProduit = $_REQUEST['idProduit'];
+        $requete="SELECT * FROM produit WHERE idProduit = ".$idProduit;
+    } 
                                  
     $dossier="../pochette/";
     try{
