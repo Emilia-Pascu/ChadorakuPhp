@@ -44,6 +44,11 @@
                  <li id="gestion"><a href="php/gestion.php"><?php echo ((isset($_SESSION["SESS_categorie"]) && ($_SESSION["SESS_categorie"]) == 'admin') ? '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; GESTION' : ''); ?></a></li>                                       
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                 <li>
+                    <a href="php/panier.php">
+                    <?php echo (isset($_SESSION["SESS_courriel"]) ? '<i class="fa fa-cart-plus" aria-hidden="true"></i>' : ''); ?>                                                                
+                    </a>
+                </li>   
                 <li ><a href="#" id="verifSess"><?php echo (isset($_SESSION["SESS_courriel"]) ? $_SESSION["SESS_courriel"] : ''); ?></a></li>
                 <li ><a href="#" id="verifAdmin"><?php echo ((isset($_SESSION["SESS_categorie"])&& ($_SESSION["SESS_categorie"]) == 'admin') ? 'admin' : 'client'); ?></a></li>              
                 <li id="enreg"><a href="php/enregistrement.php"><?php echo (!isset($_SESSION["SESS_courriel"]) ? "<span><i class='fa fa-sign-in' aria-hidden='true'></i></span>&nbsp;S'INSCRIRE" : ""); ?></a></li>
