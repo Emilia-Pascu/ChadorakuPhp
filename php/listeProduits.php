@@ -43,7 +43,7 @@
                 if(($counter % $cols) == 1) {    // vérifier si on a un row nouveau
                     $rep.= '<div class="'.$row_class.'">';	// commence row nouveau
                 }
-                $rep.='<div class="'.$col_class.'"><form method="post" id="fProd" name="fProd" action="php/panier.php?action=add&nom='.$ligne->nom.'">';
+                $rep.='<div class="'.$col_class.'"><form method="post" id="fProd" name="fProd" action="panier.php?action=add&nom='.$ligne->nom.'">';
                 $rep.='<div class="thumbnail"><img src="'.$dossier.$ligne->image.'"';
                 $rep.=' class="img-responsive" >';               
                 $rep.='<div class="caption"><h5><strong>'.$ligne->nom.'</strong></h5>';
