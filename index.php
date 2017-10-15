@@ -146,8 +146,15 @@
                     <hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <p><a class="btn btn-large btn-primary" href="#">Voir les détails</a></p>
-                    <h3 class="tpad">PARLEZ, ON VOUS ÉCOUTE</h3>
-                    <hr>
+                    <h3 class="tpad">PARLEZ, ON VOUS ÉCOUTE</h3>                   
+                    <hr>                    
+                    <div class="col-sm-2 form-group">
+                        <a class="btn btn-large btn-primary" href="php/chat.php">CHAT</a>
+                    </div>
+                    <div class="col-sm-10 form-group">
+                        <p>Un de nos consultants est toujours à votre disposition pour répondre à toute question</p>
+                    </div>
+                    <hr> 
                     <div class="col-sm-6 form-group">
                         <label for="name">Nom</label>
                         <input class="form-control" id="name" name="name" placeholder="" type="text" required>
@@ -162,7 +169,7 @@
                     </div>
 
                     <div class="col-sm-12 form-group">
-                        <button class="btn btn-large btn-primary" type="submit">Envoyer</button>
+                        <button class="btn btn-large btn-primary" type="submit">ENVOYER</button>
                     </div>
                 </div>
             </div>
