@@ -61,7 +61,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <img class="img-responsive" src="../images/800px_Geisha.jpg" width="100%" height="100%">
+                <img class="img-responsive" src="../images/geisha_11.jpg" width="100%" height="100%">
             </div>
             <div class="col-sm-8">
                 <div class="row">
