@@ -22,22 +22,37 @@ strong {
     font-weight: 400;
 }
 
-.carousel-caption {
+/* .carousel-caption {
     z-index: 10;
     margin-bottom: 30px;
+} */
+
+.carousel-inner img {
+    
+    width: 100%; /* Set width to 100% */
+    margin: auto;
 }
 
-.carousel-inner>.item>img {
+.carousel-caption h3 {
+    color: #fff !important;
+}
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+
+/* .carousel-inner>.item>img {
     position: absolute;
     top: 5 0px;
     left: 0;
     min-width: 100%;
     height: auto;
-}
+} */
 
-.carousel-inner>.item {
+/* .carousel-inner>.item {
     height: 500px;
-}
+} */
 
 .intro-block {
     background: url(../images/cloud_pattern_03.jpg) repeat;
