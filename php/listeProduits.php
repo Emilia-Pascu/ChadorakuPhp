@@ -64,8 +64,9 @@
                 $rep.='<div class="'.$col_class.'"><form method="post" id="fProd" name="fProd" action="panier.php?action=add&nom='.$ligne->nom.'">';
                 $rep.='<div ><a href="detailProduit.php?idProduit='.$ligne->idProduit.'"><img src="'.$dossier.$ligne->image.'"';
                 $rep.=' class=" img-circle img-responsive" ></a>';               
-                $rep.='<div class="caption"><h5><strong>'.$ligne->nom.'</strong></h5>';
-                $rep.='<h5>'.$ligne->categorie.'</h5><h5><em>$ '.$ligne->prix.'</em></h5>';
+                $rep.='<div class="caption"><h3><strong>'.$ligne->nom.'</strong></h3>';
+                $rep.='<h5><em>$ '.$ligne->prix.'</em></h5>';
+
                 $rep.='<h5 class="client"><select id="quantite" name="quantite" ><option value="1">1</option><option value="2">2</option>';
                 $rep.='<option value="3">3</option></select></h5><h5 class="client"><button type="submit" class="btn-success"><i class="fa fa-cart-plus"></i> Ajouter</button></h5></div></div></form></div>'; 
                                 
