@@ -3,7 +3,7 @@
     require_once("BD/connexion.inc.php");
     require 'layout/headerClient.php';    
 ?>
-    <div id="myCarousel" class="carousel slide" data-interval="2000">
+    <!--<div id="myCarousel" class="carousel slide" data-interval="2000">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -14,7 +14,7 @@
                 <img src="images/Hiroshige11_hakone.jpg">
                 <div class="container active">
                     <div class="carousel-caption">
-                        <h1>LES THÉS DU JAPON</h1>                        
+                        <h3>LES THÉS DU JAPON</h3>                        
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <img src="images/Hiroshige16_kanbara.jpg">
                 <div class="container active">
                     <div class="carousel-caption">
-                        <h1>UNE TRADITION MILLÉNAIRE</h1>                        
+                        <h3>UNE TRADITION MILLÉNAIRE</h3>                        
                     </div>
                 </div>
             </div>
@@ -30,12 +30,58 @@
                 <img src="images/Kajikazawa_in_Kai_province.jpg">
                 <div class="container active">
                     <div class="carousel-caption">
-                        <h1>DISPONIBLE AU BOUT DES DOIGTS</h1>                       
+                        <h3>DISPONIBLE AU BOUT DES DOIGTS</h3>                       
                     </div>
                 </div>
             </div>
         </div>       
+    </div>-->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/Hiroshige11_hakone.jpg" alt="Hakone" width="1200" height="700">
+        <div class="carousel-caption">
+          <h1>LES THÉS DU JAPON</h1>
+          <!--<p>The atmosphere in New York is lorem ipsum.</p>-->
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="images/Hiroshige16_kanbara.jpg" alt="Kanbara" width="1200" height="700">
+        <div class="carousel-caption">
+          <h1>UNE TRADITION MILLÉNAIRE</h1>
+         
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="images/Kajikazawa_in_Kai_province.jpg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h1>DISPONIBLE AU BOUT DES DOIGTS</h1>
+          
+        </div>      
+      </div>
     </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
     <!--Carousel End -->
     <div class="intro-block">
         <div class="container">
