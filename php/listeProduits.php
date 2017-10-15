@@ -65,7 +65,7 @@
                 $rep.='<div ><a href="detailProduit.php?idProduit='.$ligne->idProduit.'"><img src="'.$dossier.$ligne->image.'"';
                 $rep.=' class=" img-circle img-responsive" ></a>';               
                 $rep.='<div class="caption"><h3><strong>'.$ligne->nom.'</strong></h3>';
-                $rep.='<h5><em>$ '.$ligne->prix.'</em></h5>';
+                $rep.='<h5>Prix pour 100g: <em>$ '.$ligne->prix.'</em></h5>';
 
                 $rep.='<h5 class="client"><select id="quantite" name="quantite" ><option value="1">1</option><option value="2">2</option>';
                 $rep.='<option value="3">3</option></select></h5><h5 class="client"><button type="submit" class="btn-success"><i class="fa fa-cart-plus"></i> Ajouter</button></h5></div></div></form></div>'; 
