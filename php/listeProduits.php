@@ -4,10 +4,6 @@
     require '../layout/headerSimple.php';
 ?>
 
-<!--form id= "formAction" name= "formAction"  action= "" method="POST">
-    <input type="hidden" value="" id="inputCategorie" name="categorie">           
-</form-->
-
 <?php
     global $connexion;                    
     $rep = "";

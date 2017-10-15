@@ -17,49 +17,48 @@
         $listeFilms=mysqli_query($connexion,$requete);
         $rows=mysqli_num_rows($listeFilms);// nb total d'enregistrements de la base des données
         if($rows > 0) {
-            $cols = 4;    // nb colonnes
-            $counter = 1;     // compteur pour voir si on commence ou finit un row
-            $nbsp = $cols - ($rows % $cols);    // reste de colonnes vides
-            
-            $container_class = 'container';  // conteneur parent
-            $row_class = 'row';    // classe row
-            $col_class = 'col-sm-3'; // classe col
-            
-            $rep.= '<div class="'.$container_class.'">';    // ouvrir conteneur
-            while($ligne=mysqli_fetch_object($listeFilms)){                                
-                if(($counter % $cols) == 1) {    // vérifier si on a un row nouveau
-                    $rep.= '<div class="'.$row_class.'">';	// commence row nouveau
-                }
-                $rep.='<div class="'.$col_class.'"><form method="post" id="fProd" name="fProd" action="panier.php?action=add&nom='.$ligne->nom.'">';
-                $rep.='<div class="thumbnail"><a href="detailProduit.php?idProduit='.$ligne->idProduit.'"><img src="'.$dossier.$ligne->image.'"';
-                $rep.=' class="img-responsive" ></a>';               
-                $rep.='<div class="caption"><h5><strong>'.$ligne->nom.'</strong></h5>';
-                $rep.='<h5>'.$ligne->categorie.'</h5><h5><em>$ '.$ligne->prix.'</em></h5>';
-                $rep.='<h5 class="client"><select id="quantite" name="quantite" ><option value="1">1</option><option value="2">2</option>';
-                $rep.='<option value="3">3</option></select></h5><h5 class="client"><button type="submit" class="btn-success"><i class="fa fa-cart-plus"></i> Ajouter</button></h5></div></div></form></div>'; 
-                                
-                if(($counter % $cols) == 0) { // pour la dernière colonne du row le modulo sera 0
-                    $rep.= '</div>';	 //  ferme le row
-                }
-                $counter++;    // incremente compteur                            
+            $rep.= "<div class=\"container padded\">\n"; 
+            if($ligne=mysqli_fetch_object($listeFilms)){                    
+                $rep.='<form method="post" id="fProd" name="fProd" action="panier.php?action=add&nom='.$ligne->nom.'">';
+                $rep.= "        <div class=\"row\">\n"; 
+                $rep.= "            <div class=\"col-lg-12\">\n"; 
+                $rep.= "                <h2>".$ligne->nom."</h2>\n"; 
+                $rep.= "                <hr>\n"; 
+                $rep.= "            </div>\n"; 
+                $rep.= "        </div>\n"; 
+                $rep.= "        <div class=\"row\">\n"; 
+                $rep.= "            <div class=\"col-sm-6\">\n"; 
+                $rep.= "                <img class=\"img-circle img-responsive\" src=\"".$dossier.$ligne->image."\">\n"; 
+                $rep.= "               \n"; 
+                $rep.= "            </div>\n"; 
+                $rep.= "            <div class=\"col-sm-6\">\n"; 
+                $rep.= "                <p>".$ligne->description."</p>\n"; 
+                $rep.= "                <br>    \n"; 
+                $rep.= "                <div class=\"col-sm-5 grey\">\n";                
+                $rep.= "                        <p>$ ".$ligne->prix." pour 100 grammes</p>"; 
+                $rep.= "                    </div>"; 
+                $rep.= "                <div class=\"col-sm-3\">";                
+                $rep.= '                        <p class="client">Quantité: <select id="quantite" name="quantite" ><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></p>'; 
+                $rep.= "                    </div>"; 
+                $rep.= "                    <div class=\"col-sm-4\">";                
+                $rep.= '                        <p class="client"><button type="submit" class="btn-success"><i class="fa fa-cart-plus"></i> Ajouter</button></p>'; 
+                $rep.= "                    </div>"; 
+                $rep.= "            </div>"; 
+                $rep.= "            "; 
+                $rep.= "       </div></form>";                                                
             }
-            mysqli_free_result($listeFilms);
-            if($nbsp > 0) { // pour les dernières colonnes du row
-                for ($i = 0; $i < $nbsp; $i++)	{ 
-                    $rep.= '<div class="'.$col_class.'">&nbsp;</div>';		
-                }            
-            }            
+            mysqli_free_result($listeFilms);                         
         }           
     }catch (Exception $e){
         echo "Probleme pour lister";
-    }finally {
-        $rep.="</div>";
+    }finally { 
+        $rep.="</div>";       
         echo $rep;
         // echo $categorie;
     }            
     @mysqli_close($connexion);          
     ?>
-        </div> <!-- /container -->
+       
         <script>
            /* var categorie = "<?php echo $categorie; ?>";           
             categorie += ' <span class="caret"></span>';

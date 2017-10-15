@@ -101,6 +101,10 @@
                     <p><a class="btn btn-large btn-primary" href="#">Voir les détails</a></p>
                     <h3 class="tpad">PARLEZ, ON VOUS ÉCOUTE</h3>
                     <hr>
+                    <div class="col-sm-12 form-group">
+                        <a class="btn btn-large btn-primary" href="php/chat.php">Chat</a>
+                    </div>
+                    <hr>
                     <div class="col-sm-6 form-group">
                         <label for="name">Nom</label>
                         <input class="form-control" id="name" name="name" placeholder="" type="text" required>
@@ -113,14 +117,13 @@
                         <label for="comments">Commentaires</label>
                         <textarea class="form-control" id="comments" name="comments" placeholder="" rows="5"></textarea><br>
                     </div>
-
                     <div class="col-sm-12 form-group">
                         <button class="btn btn-large btn-primary" type="submit">Envoyer</button>
-                    </div>
+                    </div>                   
                 </div>
             </div>
         </div>
-    </div> 
+    </div>     
    
     <div class="ftr">
         <div class="container">
