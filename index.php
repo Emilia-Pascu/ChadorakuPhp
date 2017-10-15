@@ -48,7 +48,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="images/Hiroshige11_hakone.jpg" alt="Hakone" width="1200" height="700">
+        <img src="images/Hiroshige11_hakone.jpg" alt="Hakone">
         <div class="carousel-caption">
           <h1>LES THÉS DU JAPON</h1>
           <!--<p>The atmosphere in New York is lorem ipsum.</p>-->
@@ -59,15 +59,15 @@
         <img src="images/Hiroshige16_kanbara.jpg" alt="Kanbara" width="1200" height="700">
         <div class="carousel-caption">
           <h1>UNE TRADITION MILLÉNAIRE</h1>
-         
+          
         </div>      
       </div>
     
       <div class="item">
-        <img src="images/Kajikazawa_in_Kai_province.jpg" alt="Los Angeles" width="1200" height="700">
+        <img src="images/Kajikazawa_in_Kai_province.jpg" alt="Kajikazawa" width="1200" height="700">
         <div class="carousel-caption">
-          <h1>DISPONIBLE AU BOUT DES DOIGTS</h1>
-          
+          <h1>DISPONIBLE AU BOUT DES DOIGTS</h3>
+         
         </div>      
       </div>
     </div>
@@ -86,11 +86,12 @@
     <div class="intro-block">
         <div class="container">
             <div class="row">
-                <div class="col-xs-3">
+                <!--<div class="col-xs-3">
                     <img class="img-responsive tpad" src="images/logo.png">
-                </div>
-                <div class="col-xs-9">
-                    <h1 class="text-muted">CHA DO RAKU <span class="text-muted"> votre maître des thés</span></h1>
+                </div>-->
+                <div class="col-xs-12">
+                    <h1 class="text-muted">CHA DO RAKU</h1>
+                    <h2 class="text-muted">votre maître des thés</h2>
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
@@ -147,10 +148,6 @@
                     <p><a class="btn btn-large btn-primary" href="#">Voir les détails</a></p>
                     <h3 class="tpad">PARLEZ, ON VOUS ÉCOUTE</h3>
                     <hr>
-                    <div class="col-sm-12 form-group">
-                        <a class="btn btn-large btn-primary" href="php/chat.php">Chat</a>
-                    </div>
-                    <hr>
                     <div class="col-sm-6 form-group">
                         <label for="name">Nom</label>
                         <input class="form-control" id="name" name="name" placeholder="" type="text" required>
@@ -163,13 +160,14 @@
                         <label for="comments">Commentaires</label>
                         <textarea class="form-control" id="comments" name="comments" placeholder="" rows="5"></textarea><br>
                     </div>
+
                     <div class="col-sm-12 form-group">
                         <button class="btn btn-large btn-primary" type="submit">Envoyer</button>
-                    </div>                   
+                    </div>
                 </div>
             </div>
         </div>
-    </div>     
+    </div> 
    
     <div class="ftr">
         <div class="container">
