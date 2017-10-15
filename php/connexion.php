@@ -55,12 +55,12 @@
         return $data;
     }
 ?>    
-    <div class="container" id="formLogin">
-        <div class="jumbotron" id="jumbo">
+    <div class="container connexion" id="formLogin">
+        <div class="jumbotron connexion" id="jumbo">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <div class="panel panel-login">
-                        <div class="panel-heading">
+                    <div class="panel panel-login connexion">
+                        <div class="panel-heading ">
                             <div class="row">
                                 <div class="col-xs-6">
                                     <a href="#" class="active" id="login-form-link"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; CONNEXION</a>
