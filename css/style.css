@@ -13,7 +13,7 @@ h3,
 h4,
 h5 {
     /* font-family: 'Abel', sans-serif; */
-    font-family: 'japonais';
+    font-family: 'japonais2';
     text-transform: uppercase;
 }
 
@@ -290,6 +290,11 @@ td {
 @font-face {
     font-family: japonais;
     src: url(../ZinHenaBokuryu-CRF.otf);
+    font-family: japonais1;
+    src: url(../YozakuraJP-Regular.otf);
+    font-family: japonais2;
+    src: url(../YozakuraJP-Light.otf);
+    
 }
 
 #verifAdmin {
