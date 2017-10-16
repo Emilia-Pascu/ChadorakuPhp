@@ -81,6 +81,7 @@ switch($_GET["action"]) {
 <?php
 if(isset($_SESSION["cart_item"])){
     $item_total = 0;
+	$quantite_total = 0;
 ?>	
 <table class='table table-striped'>
 <tbody>
@@ -105,6 +106,9 @@ $dossier="../pochette/";
 				</tr>
 				<?php
         $item_total += ($item["prix"]*$item["quantite"]);
+		$_SESSION["valeurAchats"] = $item_total;
+		$quantite_total += $item["quantite"];
+		$_SESSION["quantiteAchats"] = $quantite_total;
 		$tvq = 0.07;
 		$tps = 0.05;
 		$item_tvq = round($item_total*$tvq,2);
@@ -147,6 +151,15 @@ $dossier="../pochette/";
     </div>
 </div>
 </div>
-</div>		
+</div>	
+<script>
+	var quantiteTotale = "<?php echo isset($_SESSION["cart_item"]) ? $_SESSION["quantiteAchats"]: ''; ?>";
+	var prixTotal = "<?php echo isset($_SESSION["cart_item"]) ? $_SESSION["valeurAchats"]: ''; ?>";
+	/*$("#spnQuant").html(quantiteTotale);
+	$("#spnPrix").html(prixTotal);*/
+	remplirPanier(quantiteTotale, prixTotal);
+	/*document.getElementById("spnQuant").innerHTML = quantiteTotale;
+	document.getElementById("spnPrix").innerHTML = prixTotal;	*/
+</script>	
 </BODY>
 </HTML>

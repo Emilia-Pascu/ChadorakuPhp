@@ -102,7 +102,11 @@
                 }else{
                     btnCond[i].style.display = 'block';
                 } 
-            }          
+            }  
+
+            var quantiteTotale = "<?php echo isset($_SESSION["cart_item"]) ? $_SESSION["quantiteAchats"]: ''; ?>";
+            var prixTotal = "<?php echo isset($_SESSION["cart_item"]) ? $_SESSION["valeurAchats"]: ''; ?>";	
+            remplirPanier(quantiteTotale, prixTotal);        
         </script>
     </body>
 </html>

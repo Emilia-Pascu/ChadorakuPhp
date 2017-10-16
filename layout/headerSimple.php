@@ -46,7 +46,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="../php/panier.php">
-                    <?php echo (isset($_SESSION["SESS_courriel"]) ? '<i class="fa fa-cart-plus" aria-hidden="true"></i>' : ''); ?>                                                                
+                    <?php echo (isset($_SESSION["SESS_courriel"]) ? '<i class="fa fa-cart-plus" aria-hidden="true"></i>' : ''); ?>  
+                    <span id="spnQuant"></span><span id="spnPrix"></span>                    
                     </a>
                 </li>   
                 <li ><a href="#" id="verifSess"><?php echo (isset($_SESSION["SESS_courriel"]) ? $_SESSION["SESS_courriel"] : ''); ?></a></li>

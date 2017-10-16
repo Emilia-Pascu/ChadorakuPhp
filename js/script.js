@@ -138,3 +138,13 @@ function showMessage(messageHTML) {
 		websocket.send(JSON.stringify(messageJSON));
 	});
 });*/
+
+function remplirPanier(quantiteTotale, prixTotal) {
+    document.getElementById("spnQuant").innerHTML = quantiteTotale;
+    if (prixTotal != '') {
+        document.getElementById("spnPrix").innerHTML = '(<sup>$</sup>' + prixTotal + ')';
+    } else {
+        document.getElementById("spnPrix").innerHTML = prixTotal;
+    }
+
+}
