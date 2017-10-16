@@ -2,7 +2,22 @@
     session_start(); 
     require_once("BD/connexion.inc.php");
     require 'layout/headerClient.php';    
-?>
+    $message = "";
+
+    if ( !empty($_POST)) {    
+    global $connexion;
+	$nom=$_POST['nom'];
+    $courriel=$_POST['courriel'];
+    $description=$_POST['description'];	
+	$requete="INSERT INTO commentaire values(0,?,?,?)";
+	$stmt = $connexion->prepare($requete);
+	$stmt->bind_param("sss", $nom,$courriel,$description);
+	$stmt->execute();
+    $message = "Votre message a été bien envoyé.";
+    @mysqli_close($connexion);
+    //header("Location: index.php");
+} 
+?>   
     <!--<div id="myCarousel" class="carousel slide" data-interval="2000">
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -148,27 +163,35 @@
                     <p><a class="btn btn-large btn-primary" href="#">Voir les détails</a></p>
                     <h3 class="tpad">PARLEZ, ON VOUS ÉCOUTE</h3>                   
                     <hr>                     
-                    <div class="col-sm-12 form-group">
+                    <div>
                         <p>Un de nos consultants est à votre disposition pour répondre à toute question du lundi au vendredi, entre 8h30 et 18h30 </p>
                         <a class="btn btn-large btn-primary" href="php/chat.php">CHAT</a>
                     </div>
-                    <hr>                       
-                    <div class="col-sm-6 form-group">
-                        <label for="name">Nom</label>
-                        <input class="form-control" id="name" name="name" placeholder="" type="text" required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="email">Courriel</label>
-                        <input class="form-control" id="email" name="email" placeholder="" type="email" required>
-                    </div>
-                    <div class="col-sm-12 form-group">
-                        <label for="comments">Commentaires</label>
-                        <textarea class="form-control" id="comments" name="comments" placeholder="" rows="5"></textarea><br>
-                    </div>
-
-                    <div class="col-sm-12 form-group">
-                        <button class="btn btn-large btn-primary" type="submit">ENVOYER</button>
-                    </div>
+                    <hr>  
+                    <form id="formCommentaires" action="" enctype="" method="POST">    
+                        <div class="row">                 
+                            <div class="col-sm-6 form-group">
+                                <label for="nom">Nom</label>
+                                <input class="form-control" id="nom" name="nom" placeholder="" type="text" required>
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <label for="courriel">Courriel</label>
+                                <input class="form-control" id="courriel" name="courriel" placeholder="" type="email" required>
+                            </div>
+                        </div> 
+                        <div class="row"> 
+                            <div class="col-sm-12 form-group">
+                                <label for="description">Commentaires</label>
+                                <textarea class="form-control" id="description" name="description" placeholder="" rows="5"></textarea><br>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="col-sm-12 form-group">
+                                <button class="btn btn-large btn-primary" type="submit"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; ENVOYER</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-sm-12 alert alert-success msg" > <?php echo $message;?></div>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
     
     global $connexion;   
    
-    $idUtilisateur = $courriel = $motPasse = $nom = $prenom = $telephone = $appartement = $noCivique = $ville = $pays = $rue = $codePostal =  $message = "";  
+    $idUtilisateur = $courriel = $motPasse = $nom = $prenom = $telephone = $appartement = $noCivique = $ville = $province = $pays = $rue = $codePostal =  $message = "";  
     $isValid = true;
     if (!empty($_POST)) {   
         $courriel = test_input($_POST["courriel"]);
@@ -22,12 +22,13 @@
         $ville = test_input($_POST["ville"]);
         $pays = test_input($_POST["pays"]); 
         $rue = test_input($_POST["rue"]);
+        $province = test_input($_POST["province"]);
         $codePostal = test_input($_POST["codePostal"]);       
         $categorie = "client";     
         $idUtilisateur =  $_SESSION["SESS_idUtilisateur"];
-            $requete="UPDATE utilisateur SET nom=?,prenom=?,telephone=?,courriel=?,motPasse=?,noCivique=?,rue=?,appartement=?,codePostal=?,ville=?,pays=?,categorie=? WHERE idUtilisateur=?";
+            $requete="UPDATE utilisateur SET nom=?,prenom=?,telephone=?,courriel=?,motPasse=?,noCivique=?,rue=?,appartement=?,codePostal=?,ville=?,province=?,pays=?,categorie=? WHERE idUtilisateur=?";
             $stmt = $connexion->prepare($requete);
-            $stmt->bind_param("ssssssssssssi", $nom,$prenom,$telephone,$courriel,$motPasse,$noCivique,$rue,$appartement,$codePostal,$ville,$pays,$categorie,$idUtilisateur);
+            $stmt->bind_param("sssssssssssssi", $nom,$prenom,$telephone,$courriel,$motPasse,$noCivique,$rue,$appartement,$codePostal,$ville,$province,$pays,$categorie,$idUtilisateur);
             $stmt->execute();            
             $_SESSION["SESS_nom"] = $nom;
             $_SESSION["SESS_prenom"] = $prenom;
@@ -39,6 +40,7 @@
             $_SESSION["SESS_appartement"] = $appartement;  
             $_SESSION["SESS_codePostal"] = $codePostal;
             $_SESSION["SESS_ville"] = $ville;
+            $_SESSION["SESS_province"] = $province;
             $_SESSION["SESS_pays"] = $pays;
             $_SESSION["SESS_categorie"] = $categorie;  
             $message = "Votre profil a été mis à jour";
@@ -126,7 +128,13 @@
                                 <input class="form-control input-lg" type="text" id="codePostal" name="codePostal" value="<?php echo $_SESSION["SESS_codePostal"]; ?>">
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="province">Province</label>
+                                <input class="form-control input-lg" type="text" id="province" name="province" value="<?php echo $_SESSION["SESS_province"]; ?>">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
                             <div class="form-group">
                                 <label for="pays">Pays</label>
                                 <input class="form-control input-lg" type="text" id="pays" name="pays" value="<?php echo $_SESSION["SESS_pays"]; ?>">

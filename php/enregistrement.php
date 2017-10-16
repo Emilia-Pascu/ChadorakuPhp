@@ -5,7 +5,7 @@
 
     global $connexion;   
    
-    $courriel = $motPasse = $nom = $prenom = $telephone = $appartement = $noCivique = $ville = $pays = $rue = $codePostal =  $message = "";  
+    $courriel = $motPasse = $nom = $prenom = $telephone = $appartement = $noCivique = $ville = $pays = $rue = $codePostal = $province = $message = "";  
     $isValid = true;
     if (!empty($_POST)) {   
         $courriel = test_input($_POST["courriel"]);
@@ -22,7 +22,8 @@
         $ville = test_input($_POST["ville"]);
         $pays = test_input($_POST["pays"]); 
         $rue = test_input($_POST["rue"]);
-        $codePostal = test_input($_POST["codePostal"]);       
+        $codePostal = test_input($_POST["codePostal"]);  
+        $province = test_input($_POST["province"]);       
         $categorie = "client";          
         $requete="SELECT * FROM utilisateur WHERE courriel=?";
         $stmt = $connexion->prepare($requete);
@@ -35,7 +36,7 @@
         }else{
             $requete="INSERT INTO utilisateur values(0,?,?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = $connexion->prepare($requete);
-            $stmt->bind_param("ssssssssssss", $nom,$prenom,$telephone,$courriel,$motPasse,$noCivique,$rue,$appartement,$codePostal,$ville,$pays,$categorie);
+            $stmt->bind_param("sssssssssssss", $nom,$prenom,$telephone,$courriel,$motPasse,$noCivique,$rue,$appartement,$codePostal,$ville,$province,$pays,$categorie);
             $stmt->execute(); 
             $_SESSION["SESS_idUtilisateur"] = $connexion->insert_id;
             $_SESSION["SESS_nom"] = $nom;
@@ -48,6 +49,7 @@
             $_SESSION["SESS_appartement"] = $appartement;  
             $_SESSION["SESS_codePostal"] = $codePostal;
             $_SESSION["SESS_ville"] = $ville;
+            $_SESSION["SESS_province"] = $province;
             $_SESSION["SESS_pays"] = $pays;
             $_SESSION["SESS_categorie"] = $categorie;  
             header("Location: ../index.php");
@@ -140,8 +142,8 @@
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label for="prenom">Province</label>
-                                            <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="" required>
+                                            <label for="province">Province</label>
+                                            <input class="form-control input-lg" type="text" id="province" name="province" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5 col-sm-offset-1">
