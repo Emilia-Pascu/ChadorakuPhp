@@ -60,7 +60,7 @@
         <div class="jumbotron connexion" id="jumbo">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <div class="panel panel-login connexion">
+                    <div class="connexion">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-6">
@@ -74,18 +74,18 @@
                                 <form id="formConnexion" action="" enctype="" method="POST">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="courriel">Courriel</label>
-                                            <input class="form-control input-lg" type="text" id="courriel" name="courriel" value="">
+                                            <label for="courriel"><h3>Courriel</h3></label>
+                                            <h3><input class="form-control input-lg" type="text" id="courriel" name="courriel" value=""></h3>
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="motPasse">Mot de passe</label>
-                                            <input class="form-control input-lg" type="text" id="motPasse" name="motPasse" value="">
+                                            <label for="motPasse"><h3>Mot de passe</h3></label>
+                                            <h4><input class="form-control input-lg" type="text" id="motPasse" name="motPasse" value=""></h4>
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">
-                                        <button class="btn btn-primary margin-bottom-none" type="submit"> <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; CONNEXION</button>
+                                        <button class="btn btn-primary margin-bottom-none" type="submit"> <i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; <h5>CONNEXION</h5git ></button>
                                     </div>
                                 </form>                                
                             </div>
