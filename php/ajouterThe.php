@@ -94,6 +94,9 @@
             </div>
         </div>
     </div>
+    <?php
+        require '../layout/footer.php';
+    ?>
     <script>        
      
     </script>
