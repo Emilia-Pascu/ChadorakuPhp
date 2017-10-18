@@ -79,7 +79,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <form id="formEnregistrer" action="" enctype="" method="POST">
+                                <form id="formEnregistrer" name="formEnregistrer" action="" enctype="" method="POST" onSubmit="return validerFormEnregistrer();">
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="courriel"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Courriel</label>
@@ -107,7 +107,7 @@
                                      <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
                                             <label for="confMotPasse"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Confirmer mot de passe</label>
-                                            <input class="form-control input-lg" type="text" id="confMotPasse" name="confMotPasse" value="" required>
+                                            <input class="form-control input-lg" type="password" id="confMotPasse" name="confMotPasse" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5">
@@ -159,11 +159,11 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">
-                                        <button class="btn btn-primary margin-bottom-none" type="submit"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; S'ENREGISTRER</button>
+                                        <button class="btn btn-primary margin-bottom-none" type="submit" ><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; S'ENREGISTRER</button>
                                     </div>
                                 </form>                                
                             </div>
-                            <div class="col-sm-12 alert alert-success msg" > <?php echo $message;?></div> 
+                            <div class="col-sm-12 alert alert-success msg" id="msg"> <?php echo $message;?></div> 
                         </div>
                     </div>
                 </div>
