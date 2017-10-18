@@ -21,15 +21,13 @@
              <?php                
         global $connexion;
         $rep = "";
-        if(!empty($_POST)){
+        
+        if(!empty($_GET["categorie"])){
             $categorie = $_REQUEST['categorie'];
-            if ($categorie == 'Tous les produits'){
-                 $requete="SELECT * FROM produit ORDER BY idProduit DESC"; 
-            }else{
-                 $requete="SELECT * FROM produit WHERE categorie = '".$categorie."'";    
-            }                               
-        }else{
-            $requete="SELECT * FROM produit ORDER BY idProduit DESC";                        
+            $requete="SELECT * FROM produit WHERE categorie = ".$categorie;
+        }
+           else{
+            $requete="SELECT * FROM produit ORDER BY nom ASC";                        
         }                  
         $rep.="<table class='table table-striped'>";
         $rep.="<thead><tr><th>Image</th><th>Nom</th><th class='descrip'>Description</th><th>Catégorie</th><th>Prix</th><th>Gestion</th></tr></thead><tbody>";

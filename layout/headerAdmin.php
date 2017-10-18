@@ -32,12 +32,16 @@
                 <li class="dropdown" >
                     <a class="dropdown-toggle" data-toggle="dropdown" id="dropCategorieAdmin" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; CATÉGORIES <span class="caret"></span></a>
                     <ul class="dropdown-menu" id="menuCategorieAdmin">
-                        <li><a href="#">Matcha</a></li>
-                        <li><a href="#">Sencha</a></li>
-                        <li><a href="#">Gyokuro</a></li>
-                        <li><a href="#">Hojicha</a></li> 
-                        <li class="divider"></li>   
-                        <li><a href="#">Tous les produits</a></li>                    
+                        <li><a href="../php/gestion.php">Tous les produits</a></li>                    
+                        <li class="divider"></li>
+                        <li><a href="../php/gestion.php?categorie='Matcha'">Matcha</a></li>
+                        <li><a href="../php/gestion.php?categorie='Sencha'">Sencha</a></li>
+                        <li><a href="../php/gestion.php?categorie='Gyokuro'">Gyokuro</a></li>
+                        <li><a href="../php/gestion.php?categorie='Hojicha'">Hojicha</a></li>
+                        <li class="divider"></li>
+                        <li><a href="../php/clients.php">Clients</a></li>    
+                        <li class="divider"></li>
+                        <li><a href="../php/commentaires.php">Commentaires</a></li> 
                     </ul>
                 </li>
             </ul>
