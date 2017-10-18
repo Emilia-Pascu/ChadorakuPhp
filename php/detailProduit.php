@@ -59,6 +59,10 @@
     }            
     @mysqli_close($connexion);          
     ?>
+
+    <?php
+        require '../layout/footer.php';
+    ?>
        
         <script>
            /* var categorie = "<?php echo $categorie; ?>";           

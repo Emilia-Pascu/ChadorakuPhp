@@ -83,6 +83,11 @@
     @mysqli_close($connexion);          
     ?>
         </div> <!-- /container -->
+        
+        <?php
+            require '../layout/footer.php';
+        ?>
+
         <script>
            /* var categorie = "<?php echo $categorie; ?>";           
             categorie += ' <span class="caret"></span>';
