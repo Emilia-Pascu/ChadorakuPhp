@@ -29,7 +29,7 @@
                         $_SESSION["SESS_appartement"] = $ligne->appartement;  
                         $_SESSION["SESS_codePostal"] = $ligne->codePostal;
                         $_SESSION["SESS_ville"] = $ligne->ville;
-                        $_SESSION["SESS_province"] = $ligne->$province;
+                        $_SESSION["SESS_province"] = $ligne->province;
                         $_SESSION["SESS_pays"] = $ligne->pays;
                         $_SESSION["SESS_categorie"] = $ligne->categorie;                                      
                         $stmt->close();

@@ -16,9 +16,10 @@
     try{
         $listeFilms=mysqli_query($connexion,$requete);
         $rows=mysqli_num_rows($listeFilms);// nb total d'enregistrements de la base des données
-        if($rows > 0) {
-            $rep.= "<div class=\"container padded\">\n"; 
-            if($ligne=mysqli_fetch_object($listeFilms)){                    
+        if($rows > 0) {            
+            if($ligne=mysqli_fetch_object($listeFilms)){                 
+                $rep.= "<div class=\"container padded\">\n";  
+                $rep.= "<div class=\"jumbotron\">\n";                   
                 $rep.='<form method="post" id="fProd" name="fProd" action="panier.php?action=add&nom='.$ligne->nom.'">';
                 $rep.= "        <div class=\"row\">\n"; 
                 $rep.= "            <div class=\"col-lg-12\">\n"; 
@@ -52,7 +53,7 @@
     }catch (Exception $e){
         echo "Probleme pour lister";
     }finally { 
-        $rep.="</div>";       
+        $rep.="</div></div>";       
         echo $rep;
         // echo $categorie;
     }            
