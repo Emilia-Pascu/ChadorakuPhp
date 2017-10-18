@@ -267,3 +267,84 @@ function validerFormConnexion() {
         return true;
     }
 }
+
+function validerFormModifier() {
+    var ck_alpha_num = new RegExp(/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/);
+    var ck_courriel = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i);
+    var ck_passe = new RegExp(/^[A-Za-zÀ-ÿ0-9!@#$%^&*()_]{5,20}$/);
+    var ck_tel = new RegExp(/^[0-9]{10,12}$/);
+    var ck_alphabet = new RegExp(/^[a-zA-ZéèîêàâùÂÉÈÊÀÏÎÙ]+$/);
+    var ck_code_postal = new RegExp(/^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i);
+    var ck_app = new RegExp(/^[0-9]*[a-zA-Z]*$/);
+    var ck_string = new RegExp(/^[a-zA-ZéèîêàâùÂÉÈÊÀÏÎÙ0-9]+$/);
+    var ck_no_civ = new RegExp(/^[0-9]+[a-zA-Z]*$/);
+    var errors = [];
+
+    var courriel = $('#courriel').val();
+    var nom = $('#nom').val();
+    var motPasse = $('#motPasse').val();
+    var prenom = $('#prenom').val();
+    var telephone = $('#telephone').val();
+    var appartement = $('#appartement').val();
+    var noCivique = $('#noCivique').val();
+    var rue = $('#rue').val();
+    var ville = $('#ville').val();
+    var province = $('#province').val();
+    var codePostal = $('#codePostal').val();
+    var pays = $('#pays').val();
+
+    if (!ck_courriel.test(courriel)) {
+        errors[errors.length] = "Entrez une adresse courriel valide";
+    }
+
+    if (!ck_alpha_num.test(nom)) {
+        errors[errors.length] = "Entrez un nom valide, entre 3 et 20 caractères";
+    }
+
+    if (!ck_passe.test(motPasse)) {
+        errors[errors.length] = "Entrez un mot de passe valide, entre 5 et 20 caractères";
+    }
+
+    if (!ck_alpha_num.test(prenom)) {
+        errors[errors.length] = "Entrez un prénom valide, entre 3 et 20 caractères";
+    }
+
+    if (!ck_tel.test(telephone)) {
+        errors[errors.length] = "Entrez un numéro de téléphone valide";
+    }
+
+    if (!ck_app.test(appartement)) {
+        errors[errors.length] = "Entrez un numéro d'appartement valide";
+    }
+
+    if (!ck_no_civ.test(noCivique)) {
+        errors[errors.length] = "Entrez un numéro civique valide";
+    }
+
+    if (!ck_string.test(rue)) {
+        errors[errors.length] = "Entrez une rue valide";
+    }
+
+    if (!ck_alphabet.test(ville)) {
+        errors[errors.length] = "Entrez une ville valide";
+    }
+
+    if (!ck_alphabet.test(province)) {
+        errors[errors.length] = "Entrez une province valide";
+    }
+
+    if (!ck_code_postal.test(codePostal)) {
+        errors[errors.length] = "Entrez un code postal valide";
+    }
+
+    if (!ck_alphabet.test(pays)) {
+        errors[errors.length] = "Entrez un pays valide";
+    }
+
+    if (errors.length > 0) {
+        reportErrors(errors, 'msg');
+        return false;
+    } else {
+        return true;
+    }
+}
