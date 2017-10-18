@@ -22,25 +22,29 @@ strong {
     font-weight: 400;
 }
 
+
 /* .carousel-caption {
     z-index: 10;
     margin-bottom: 30px;
 } */
 
 .carousel-inner img {
-    
-    width: 100%; /* Set width to 100% */
+    width: 100%;
+    /* Set width to 100% */
     margin: auto;
 }
 
 .carousel-caption h3 {
     color: #fff !important;
 }
+
 @media (max-width: 600px) {
-  .carousel-caption {
-    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
+    .carousel-caption {
+        display: none;
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
 }
+
 
 /* .carousel-inner>.item>img {
     position: absolute;
@@ -49,6 +53,7 @@ strong {
     min-width: 100%;
     height: auto;
 } */
+
 
 /* .carousel-inner>.item {
     height: 500px;
@@ -294,7 +299,6 @@ td {
     src: url(../YozakuraJP-Regular.otf);
     font-family: japonais2;
     src: url(../YozakuraJP-Light.otf);
-    
 }
 
 #verifAdmin {
@@ -404,6 +408,12 @@ th {
     margin-top: 50px;
 }
 
-.connexion{
+.connexion {
     background: url(../images/Horikiri_Iris_Garden.jpg) no-repeat center;
+}
+
+#msgConn {
+    color: #555;
+    background-color: white;
+    padding: 5px;
 }
