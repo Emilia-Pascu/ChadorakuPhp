@@ -7,53 +7,158 @@
    
     $courriel = $motPasse = $nom = $prenom = $telephone = $appartement = $noCivique = $ville = $pays = $rue = $codePostal = $province = $message = "";  
     $isValid = true;
-    if (!empty($_POST)) {   
-        $courriel = test_input($_POST["courriel"]);
-        $motPasse = test_input($_POST["motPasse"]); 
-        $nom = test_input($_POST["nom"]);
-        $prenom = test_input($_POST["prenom"]);
-        $telephone = test_input($_POST["telephone"]); 
+    if (!empty($_POST)) {  
+        if (empty($_POST["courriel"])) {
+                    $message .= "Le courriel est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $courriel = test_input($_POST["courriel"]);              
+                    if (!preg_match("/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i",$courriel)) {
+                        $message .= "Entrez le courriel dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+        if (empty($_POST["motPasse"])) {
+                    $message .= "Le mot de passe est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $motPasse = test_input($_POST["motPasse"]);             
+                    if (!preg_match("/^[A-Za-zÀ-ÿ0-9!@#$%^&*()_]{5,20}$/",$motPasse)) {
+                        $message .= "Entrez le mot de passe dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+        if (empty($_POST["nom"])) {
+                    $message .= "Le nom est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $nom = test_input($_POST["nom"]);           
+                    if (!preg_match("/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/",$nom)) {
+                        $message .= "Entrez le nom dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+        if (empty($_POST["prenom"])) {
+                    $message .= "Le prénom est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $prenom = test_input($_POST["prenom"]);       
+                    if (!preg_match("/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/",$prenom)) {
+                        $message .= "Entrez le prénom dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+        if (empty($_POST["telephone"])) {
+                    $message .= "Le téléphone est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $telephone = test_input($_POST["telephone"]);       
+                    if (!preg_match("/^[0-9]{10,12}$/",$telephone)) {
+                        $message .= "Entrez le téléphone dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
         if (!empty($_POST["appartement"])) {
             $appartement = test_input($_POST["appartement"]);
+            if (!preg_match("/^[0-9]*[a-zA-Z]*$/",$appartement)) {
+                $message .= "Entrez l'appartement dans le format spécifié<br/>"; 
+                $isValid = false;
+            }
         }else{
             $appartement = "s/o";
         }
-        $noCivique = test_input($_POST["noCivique"]);
-        $ville = test_input($_POST["ville"]);
-        $pays = test_input($_POST["pays"]); 
-        $rue = test_input($_POST["rue"]);
-        $codePostal = test_input($_POST["codePostal"]);  
-        $province = test_input($_POST["province"]);       
-        $categorie = "client";          
-        $requete="SELECT * FROM utilisateur WHERE courriel=?";
-        $stmt = $connexion->prepare($requete);
-        $stmt->bind_param("s", $courriel);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $count  = mysqli_num_rows($result);
-        if($count>0){
-            $message = "Usager déjà existant";
-        }else{
-            $requete="INSERT INTO utilisateur values(0,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        if (empty($_POST["noCivique"])) {
+                    $message .= "Le numéro civique est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $noCivique = test_input($_POST["noCivique"]);     
+                    if (!preg_match("/^[0-9]+[a-zA-Z]*$/",$noCivique)) {
+                        $message .= "Entrez le numéro civique dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+        if (empty($_POST["ville"])) {
+                    $message .= "La ville est requise<br/>";
+                    $isValid = false;
+                } else {
+                    $ville = test_input($_POST["ville"]);    
+                    if (!preg_match("/^[a-zA-ZéèîêàâùÂÉÈÊÀÏÎÙ]+$/",$ville)) {
+                        $message .= "Entrez la ville dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+        if (empty($_POST["pays"])) {
+                    $message .= "Le pays est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $pays = test_input($_POST["pays"]);    
+                    if (!preg_match("/^[a-zA-ZéèîêàâùÂÉÈÊÀÏÎÙ]+$/",$pays)) {
+                        $message .= "Entrez le pays dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+        if (empty($_POST["rue"])) {
+                    $message .= "La rue est requise<br/>";
+                    $isValid = false;
+                } else {
+                    $rue = test_input($_POST["rue"]); 
+                    if (!preg_match("/^[a-zA-ZéèîêàâùÂÉÈÊÀÏÎÙ0-9]+$/",$rue)) {
+                        $message .= "Entrez la rue dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+        if (empty($_POST["codePostal"])) {
+                    $message .= "Le code postal est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $codePostal = test_input($_POST["codePostal"]);  
+                    if (!preg_match("/^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i",$codePostal)) {
+                        $message .= "Entrez le code postal dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                } 
+         if (empty($_POST["province"])) {
+                    $message .= "La province est requise<br/>";
+                    $isValid = false;
+                } else {
+                    $province = test_input($_POST["province"]);   
+                    if (!preg_match("/^[a-zA-ZéèîêàâùÂÉÈÊÀÏÎÙ]+$/",$province)) {
+                        $message .= "Entrez la province dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                }                
+        $categorie = "client";   
+        if($isValid){
+            $requete="SELECT * FROM utilisateur WHERE courriel=?";
             $stmt = $connexion->prepare($requete);
-            $stmt->bind_param("sssssssssssss", $nom,$prenom,$telephone,$courriel,$motPasse,$noCivique,$rue,$appartement,$codePostal,$ville,$province,$pays,$categorie);
-            $stmt->execute(); 
-            $_SESSION["SESS_idUtilisateur"] = $connexion->insert_id;
-            $_SESSION["SESS_nom"] = $nom;
-            $_SESSION["SESS_prenom"] = $prenom;
-            $_SESSION["SESS_telephone"] = $telephone;
-            $_SESSION["SESS_courriel"] = $courriel;
-            $_SESSION["SESS_motPasse"] = $motPasse;
-            $_SESSION["SESS_noCivique"] = $noCivique;
-            $_SESSION["SESS_rue"] = $rue;
-            $_SESSION["SESS_appartement"] = $appartement;  
-            $_SESSION["SESS_codePostal"] = $codePostal;
-            $_SESSION["SESS_ville"] = $ville;
-            $_SESSION["SESS_province"] = $province;
-            $_SESSION["SESS_pays"] = $pays;
-            $_SESSION["SESS_categorie"] = $categorie;  
-            header("Location: ../index.php");
-        }
+            $stmt->bind_param("s", $courriel);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $count  = mysqli_num_rows($result);
+            if($count>0){
+                $message = '<div id="msgConn">Usager déjà existant</div>';
+            }else{
+                $requete="INSERT INTO utilisateur values(0,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                $stmt = $connexion->prepare($requete);
+                $stmt->bind_param("sssssssssssss", $nom,$prenom,$telephone,$courriel,$motPasse,$noCivique,$rue,$appartement,$codePostal,$ville,$province,$pays,$categorie);
+                $stmt->execute(); 
+                $_SESSION["SESS_idUtilisateur"] = $connexion->insert_id;
+                $_SESSION["SESS_nom"] = $nom;
+                $_SESSION["SESS_prenom"] = $prenom;
+                $_SESSION["SESS_telephone"] = $telephone;
+                $_SESSION["SESS_courriel"] = $courriel;
+                $_SESSION["SESS_motPasse"] = $motPasse;
+                $_SESSION["SESS_noCivique"] = $noCivique;
+                $_SESSION["SESS_rue"] = $rue;
+                $_SESSION["SESS_appartement"] = $appartement;  
+                $_SESSION["SESS_codePostal"] = $codePostal;
+                $_SESSION["SESS_ville"] = $ville;
+                $_SESSION["SESS_province"] = $province;
+                $_SESSION["SESS_pays"] = $pays;
+                $_SESSION["SESS_categorie"] = $categorie;  
+                header("Location: ../index.php");
+            }
+        }       
     }
     
     function test_input($data) {

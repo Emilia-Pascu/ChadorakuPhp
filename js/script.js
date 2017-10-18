@@ -152,7 +152,7 @@ function remplirPanier(quantiteTotale, prixTotal) {
 function validerFormEnregistrer() {
     var ck_alpha_num = new RegExp(/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/);
     var ck_courriel = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i);
-    var ck_passe = new RegExp(/^[A-Za-zÀ-ÿ0-9!@#$%^&*()_]{6,20}$/);
+    var ck_passe = new RegExp(/^[A-Za-zÀ-ÿ0-9!@#$%^&*()_]{5,20}$/);
     var ck_tel = new RegExp(/^[0-9]{10,12}$/);
     var ck_alphabet = new RegExp(/^[a-zA-ZéèîêàâùÂÉÈÊÀÏÎÙ]+$/);
     var ck_code_postal = new RegExp(/^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i);
@@ -184,7 +184,7 @@ function validerFormEnregistrer() {
     }
 
     if (!ck_passe.test(motPasse)) {
-        errors[errors.length] = "Entrez un mot de passe valide, entre 6 et 20 caractères";
+        errors[errors.length] = "Entrez un mot de passe valide, entre 5 et 20 caractères";
     }
 
     if (!ck_alpha_num.test(prenom)) {
@@ -228,7 +228,7 @@ function validerFormEnregistrer() {
     }
 
     if (errors.length > 0) {
-        reportErrors(errors);
+        reportErrors(errors, 'msg');
         return false;
     } else {
         return true;
@@ -236,11 +236,34 @@ function validerFormEnregistrer() {
 
 }
 
-function reportErrors(errors) {
+function reportErrors(errors, element) {
     var msg = "S'il vous plaît, entrez des données valides: <br/>";
     for (var i = 0; i < errors.length; i++) {
         var numError = i + 1;
         msg += numError + ". " + errors[i] + "<br/>";
     }
-    $('#msg').html(msg);
+    $('#' + element + '').html('<div id="msgConn">' + msg + '</div>');
+}
+
+function validerFormConnexion() {
+    var ck_courriel = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i);
+    var ck_passe = new RegExp(/^[A-Za-zÀ-ÿ0-9!@#$%^&*()_]{5,20}$/);
+    var errors = [];
+
+    var courriel = $('#courriel').val();
+    var motPasse = $('#motPasse').val();
+
+    if (!ck_courriel.test(courriel)) {
+        errors[errors.length] = "Entrez une adresse courriel valide";
+    }
+    if (!ck_passe.test(motPasse)) {
+        errors[errors.length] = "Entrez un mot de passe valide, entre 5 et 20 caractères";
+    }
+
+    if (errors.length > 0) {
+        reportErrors(errors, 'msg');
+        return false;
+    } else {
+        return true;
+    }
 }
