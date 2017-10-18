@@ -36,7 +36,7 @@
                 $rep.= "                <p>".$ligne->description."</p>\n"; 
                 $rep.= "                <br>    \n"; 
                 $rep.= "                <div class=\"col-sm-5 grey\">\n";                
-                $rep.= "                        <p>$ ".$ligne->prix." pour 100 grammes</p>"; 
+                $rep.= "                        <p>$ ".$ligne->prix." pour 20 grammes</p>"; 
                 $rep.= "                    </div>"; 
                 $rep.= "                <div class=\"col-sm-3\">";                
                 $rep.= '                        <p class="client">Quantité: <select id="quantite" name="quantite" ><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></p>'; 

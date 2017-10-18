@@ -16,21 +16,16 @@
         $requete="SELECT * FROM produit WHERE categorie = ".$categorie;
         //entête
    
-    $rep.= '<h1 class="text-muted">'.$categorie.'</h1>';
+    $rep.= '<h1 class="text-muted">Notre sélection de '.$categorie.'</h1>';
     $rep.='<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div></div></div>';
-    $rep.='<div class="container padded">
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Notre sélection de'.$categorie.'</h2>
-            <hr>
-        </div>
-    </div>';
+    
     //fin entête
     }else{
-        $requete="SELECT * FROM produit ORDER BY idProduit DESC";
+        $requete="SELECT * FROM produit ORDER BY nom ASC";
         //entête   
     $rep.= '<h1 class="text-muted">Tous nos Thés</h1>';
-    $rep.='<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div></div></div>';
+    $rep.='<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>';
+    $rep.='</div></div></div></div>';
     //fin entête    
     }  
                                  
@@ -61,7 +56,7 @@
                 $rep.='<div ><a href="detailProduit.php?idProduit='.$ligne->idProduit.'"><img src="'.$dossier.$ligne->image.'"';
                 $rep.=' class=" img-circle img-responsive" ></a>';               
                 $rep.='<div class="caption"><h3><strong>'.$ligne->nom.'</strong></h3>';
-                $rep.='<h5>Prix pour 100g: <em>$ '.$ligne->prix.'</em></h5>';
+                $rep.='<h5>Prix pour 20g: <em>$ '.$ligne->prix.'</em></h5>';
 
                 $rep.='<h5 class="client"><select id="quantite" name="quantite" ><option value="1">1</option><option value="2">2</option>';
                 $rep.='<option value="3">3</option></select></h5><h5 class="client"><button type="submit" class="btn-success"><i class="fa fa-cart-plus"></i> Ajouter</button></h5></div></div></form></div>'; 

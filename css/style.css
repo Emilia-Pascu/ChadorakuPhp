@@ -77,7 +77,7 @@ strong {
 .text-muted {
     color: #110D03;
     font-weight: 900;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .tpad {
@@ -406,4 +406,8 @@ th {
 
 .connexion{
     background: url(../images/Horikiri_Iris_Garden.jpg) no-repeat center;
+}
+
+#leftmargin{
+    margin-left: 100px;
 }
