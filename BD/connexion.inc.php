@@ -8,4 +8,5 @@
 		echo "Probleme de connexion au serveur de bd";
 		exit();
 	}
+	mysqli_set_charset($connexion,"utf8");
 ?>
