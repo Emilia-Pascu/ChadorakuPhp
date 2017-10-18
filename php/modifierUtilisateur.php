@@ -67,35 +67,35 @@
             </div>
             <div class="col-sm-8">
                 <div class="row">
-                    <form id="formModifier" action="" enctype="" method="POST">
+                    <form id="formModifier" action="" enctype="" method="POST" onSubmit="return validerFormModifier();">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="courriel">Courriel</label>
-                                <input class="form-control input-lg" type="text" id="courriel" name="courriel" value="<?php echo $_SESSION["SESS_courriel"]; ?>">
+                                <input class="form-control input-lg" type="text" id="courriel" name="courriel" value="<?php echo $_SESSION["SESS_courriel"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="motPasse">Mot de passe</label>
-                                <input class="form-control input-lg" type="text" id="motPasse" name="motPasse" value="<?php echo $_SESSION["SESS_motPasse"]; ?>">
+                                <input class="form-control input-lg" type="text" id="motPasse" name="motPasse" value="<?php echo $_SESSION["SESS_motPasse"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="nom">Nom</label>
-                                <input class="form-control input-lg" type="text" id="nom" name="nom" value="<?php echo $_SESSION["SESS_nom"]; ?>">
+                                <input class="form-control input-lg" type="text" id="nom" name="nom" value="<?php echo $_SESSION["SESS_nom"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="prenom">Prénom</label>
-                                <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="<?php echo $_SESSION["SESS_prenom"]; ?>">
+                                <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="<?php echo $_SESSION["SESS_prenom"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="telephone">Téléphone</label>
-                                <input class="form-control input-lg" type="text" id="telephone" name="telephone" value="<?php echo $_SESSION["SESS_telephone"]; ?>">
+                                <input class="form-control input-lg" type="text" id="telephone" name="telephone" value="<?php echo $_SESSION["SESS_telephone"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-3">
@@ -107,37 +107,37 @@
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label for="noCivique">No civique</label>
-                                <input class="form-control input-lg" type="text" id="noCivique" name="noCivique" value="<?php echo $_SESSION["SESS_noCivique"]; ?>">
+                                <input class="form-control input-lg" type="text" id="noCivique" name="noCivique" value="<?php echo $_SESSION["SESS_noCivique"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="rue">Rue</label>
-                                <input class="form-control input-lg" type="text" id="rue" name="rue" value="<?php echo $_SESSION["SESS_rue"]; ?>">
+                                <input class="form-control input-lg" type="text" id="rue" name="rue" value="<?php echo $_SESSION["SESS_rue"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="ville">Ville</label>
-                                <input class="form-control input-lg" type="text" id="ville" name="ville" value="<?php echo $_SESSION["SESS_ville"]; ?>">
+                                <input class="form-control input-lg" type="text" id="ville" name="ville" value="<?php echo $_SESSION["SESS_ville"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="codePostal">Code postal</label>
-                                <input class="form-control input-lg" type="text" id="codePostal" name="codePostal" value="<?php echo $_SESSION["SESS_codePostal"]; ?>">
+                                <input class="form-control input-lg" type="text" id="codePostal" name="codePostal" value="<?php echo $_SESSION["SESS_codePostal"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label for="province">Province</label>
-                                <input class="form-control input-lg" type="text" id="province" name="province" value="<?php echo $_SESSION["SESS_province"]; ?>">
+                                <input class="form-control input-lg" type="text" id="province" name="province" value="<?php echo $_SESSION["SESS_province"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <label for="pays">Pays</label>
-                                <input class="form-control input-lg" type="text" id="pays" name="pays" value="<?php echo $_SESSION["SESS_pays"]; ?>">
+                                <input class="form-control input-lg" type="text" id="pays" name="pays" value="<?php echo $_SESSION["SESS_pays"]; ?>" required>
                             </div>
                         </div>
                         <div class="col-sm-6 col-sm-offset-3" id="btnModifier">
@@ -145,7 +145,7 @@
                         </div>
                     </form>                    
                 </div>
-                <div class="col-sm-12 alert alert-success msg" > <?php echo $message;?></div>
+                <div class="col-sm-12 alert alert-success msg" id="msg"> <?php echo $message;?></div>
             </div>
         </div>
     </div>

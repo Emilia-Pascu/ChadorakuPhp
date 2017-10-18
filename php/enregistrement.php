@@ -65,7 +65,7 @@
                 $isValid = false;
             }
         }else{
-            $appartement = "s/o";
+            $appartement = "SO";
         }
         if (empty($_POST["noCivique"])) {
                     $message .= "Le numéro civique est requis<br/>";
