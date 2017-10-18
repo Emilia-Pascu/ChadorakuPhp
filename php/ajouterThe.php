@@ -61,7 +61,7 @@
                                     <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="prix">Prix unitaire</label>
-                                            <input class="form-control input-lg" type="number" min="1" max="50" step="0.01" id="prix" name="prix" value="" required>
+                                            <input class="form-control input-lg" type="number" min="1" max="100" step="0.01" id="prix" name="prix" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
