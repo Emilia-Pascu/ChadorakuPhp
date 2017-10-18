@@ -34,7 +34,7 @@
         if($count>0){
             $message = "Usager déjà existant";
         }else{
-            $requete="INSERT INTO utilisateur values(0,?,?,?,?,?,?,?,?,?,?,?,?)";
+            $requete="INSERT INTO utilisateur values(0,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = $connexion->prepare($requete);
             $stmt->bind_param("sssssssssssss", $nom,$prenom,$telephone,$courriel,$motPasse,$noCivique,$rue,$appartement,$codePostal,$ville,$province,$pays,$categorie);
             $stmt->execute(); 
