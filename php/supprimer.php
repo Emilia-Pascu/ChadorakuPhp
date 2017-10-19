@@ -14,8 +14,8 @@
         $result = $stmt->get_result();
         $dossier="../pochette/";
         if($ligne = $result->fetch_object()){
-            $pochette=$ligne->pochette;
-            unlink($dossier.$pochette);
+           // $pochette=$ligne->pochette;
+            // unlink($dossier.$pochette);
             $requete="DELETE FROM produit WHERE idProduit=?";
             $stmt = $connexion->prepare($requete);
             $stmt->bind_param("i", $idProduit);
