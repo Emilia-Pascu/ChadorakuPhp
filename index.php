@@ -80,8 +80,7 @@
       <div class="item">
         <img src="images/Kajikazawa_in_Kai_province.jpg" alt="Kajikazawa" width="1200" height="700">
         <div class="carousel-caption">
-          <h1>DISPONIBLE AU BOUT DES DOIGTS</h3>
-         
+          <h1>DISPONIBLE AU BOUT DES DOIGTS</h3>   
         </div>      
       </div>
     </div>
@@ -106,7 +105,7 @@
                 <div class="col-xs-12">
                     <h1 class="text-muted">CHA DO RAKU</h1>
                     <h2 class="text-muted">votre maître des thés</h2>
-                    <p class="lead">Chaque année, nous parcourons le Japon à la rencontre des meilleurs producteurs. Aprés une sélection rigoureuse, nous vous présentons les thés les plus fins et les plus traditionnels. Bonne dégustation </p>
+                    <p class="lead" id="presentation">Chaque année, nous parcourons le Japon à la rencontre des meilleurs producteurs. Aprés une sélection rigoureuse, nous vous présentons les thés les plus fins et les plus traditionnels. Bonne dégustation! </p>
                 </div>
             </div>
         </div>
