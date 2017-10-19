@@ -15,7 +15,6 @@
 	$stmt->execute();
     $message = "Votre message a été bien envoyé.";
     @mysqli_close($connexion);
-    //header("Location: index.php");
 } 
 ?>   
     <!--<div id="myCarousel" class="carousel slide" data-interval="2000">
@@ -107,7 +106,7 @@
                 <div class="col-xs-12">
                     <h1 class="text-muted">CHA DO RAKU</h1>
                     <h2 class="text-muted">votre maître des thés</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="lead">Chaque année, nous parcourons le Japon à la rencontre des meilleurs producteurs. Aprés une sélection rigoureuse, nous vous présentons les thés les plus fins et les plus traditionnels. Bonne dégustation </p>
                 </div>
             </div>
         </div>
@@ -123,26 +122,28 @@
             <div class="col-sm-6 col-md-3">
                <a href="php/listeProduits.php?categorie='Matcha'"> <img class="img-circle img-responsive" src="images/matcha.jpg" > </a>
                 <h3>Matcha</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Le matcha est une poudre très fine de thé vert moulu, qui a été broyée entre deux meules en pierre. Il est utilisé pour la cérémonie du thé japonaise et comme colorant ou arôme naturel avec des aliments tels que le mochi, les soba, la crème glacée au thé vert.</p>
                 <p><a class="btn btn-default" href="php/listeProduits.php?categorie='Matcha'">Voir la sélection &raquo;</a></p>
             </div>
             <div class="col-sm-6 col-md-3">
                 <a href="php/listeProduits.php?categorie='Sencha'"> <img class="img-circle img-responsive" src="images/sencha.jpg"></a>
                 <h3>Sencha</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Le sencha est un thé vert dont le nom signifie littéralement « thé infusé ». Il est le thé le plus courant au Japon. Son processus de fabrication repose sur un arrêt de l'oxydation dans un bain à la vapeur . Puis les feuilles sont roulées et séchées.</p>
+                
                 <p><a class="btn btn-default" href="php/listeProduits.php?categorie='Sencha'">Voir la sélection &raquo;</a></p>
             </div>
             <div class="clearfix hidden-md hidden-lg"></div>
             <div class="col-sm-6 col-md-3">
                 <a href="php/listeProduits.php?categorie='Gyokuro'"> <img class="img-circle img-responsive" src="images/gyokuro.jpg"></a>
                 <h3>Gyokuro</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Le gyokuro est un thé vert de haute qualité, très estimé au Japon. Il est riche en théanine et pauvre en tanins, ce qui lui confère un goût très doux et umami. Sa force en caféine en fait un substitut du café. C'est un thé d'ombre, 2-3 semaines à 90 % d'ombrage.</p>
                 <p><a class="btn btn-default" href="php/listeProduits.php?categorie='Gyokuro'">Voir la sélection &raquo;</a></p>
             </div>
             <div class="col-sm-6 col-md-3">
                 <a href="php/listeProduits.php?categorie='Hojicha'"> <img class="img-circle img-responsive" src="images/hojicha.jpg"></a>
                 <h3>Hojicha</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Ce thé torréfié a des saveurs boisées et torréfiées qui évoquent ainsi le café, mêlées aux notes iodées propres aux thés japonais. Sa liqueur a également des saveurs caramels. Son infusion a une couleur bronze, tendant parfois vers le brun doré.</p>
+
                 <p><a class="btn btn-default" href="php/listeProduits.php?categorie='Hojicha'">Voir la sélection &raquo;</a></p>
             </div>
         </div>
@@ -156,11 +157,13 @@
                 <div class="col-sm-6">
                     <h3 class="tpad">SALON DE THÉ</h3>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Dans un décor typiquement japonais, venez déguster nos thés et découvrir nos plats traditionnels. Notre service, vous accompagne à chaque étape de votre découverte pour vous permettre dans appécier toutes les facettes.</p>
+                    
                     <h3 class="tpad">ATELIERS DE DÉGUSTATION</h3>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p><a class="btn btn-large btn-primary" href="#">Voir les détails</a></p>
+                    <p>Quel meilleur moyen de découvrir le monde fascinant des thés du Japon que d'être enseigné par un maître du thé. Dans une ambiance décontractée, partagez vos impressions avec d'autres curieux qui désirent approfondir leur amour du thé.</p>
+                    
+                    <!-- <p><a class="btn btn-large btn-primary" href="#">Voir les détails</a></p> -->
                     <h3 class="tpad">PARLEZ, ON VOUS ÉCOUTE</h3>                   
                     <hr>                     
                     <div>
