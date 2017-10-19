@@ -24,13 +24,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../index.php">茶道楽 &nbsp; CHA DO RAKU</a>
+            <a class="navbar-brand policeMenu" href="../index.php">茶道楽 &nbsp; CHA DO RAKU</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="../index.php">ACCUEIL</a></li>                  
                 <li class="dropdown" >
-                    <a class="dropdown-toggle" data-toggle="dropdown" id="dropCategorieAdmin" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; CATÉGORIES <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="dropCategorieAdmin" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp; GESTION <span class="caret"></span></a>
                     <ul class="dropdown-menu" id="menuCategorieAdmin">
                         <li><a href="../php/gestion.php">Tous les produits</a></li>                    
                         <li class="divider"></li>

@@ -432,3 +432,9 @@ th {
     font-size: 20px;
     font-weight: bold;
 }
+
+.policeMenu{
+    font-family: 'japonais2';
+    text-transform: uppercase;
+    color: white;
+}

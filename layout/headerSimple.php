@@ -24,7 +24,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../index.php"><h5>茶道楽 &nbsp;CHA DO RAKU</h5></a>
+            <a class="navbar-brand policeMenu" href="../index.php">茶道楽 &nbsp;CHA DO RAKU</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
