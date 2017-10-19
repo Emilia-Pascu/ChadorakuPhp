@@ -34,8 +34,8 @@ strong {
     margin: auto;
 }
 
-.carousel-caption h3 {
-    color: #fff !important;
+.carousel-caption h1 {
+    color:whitesmoke !important;
 }
 
 @media (max-width: 600px) {

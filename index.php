@@ -70,7 +70,7 @@
       </div>
 
       <div class="item">
-        <img src="images/Hiroshige16_kanbara.jpg" alt="Kanbara" width="1200" height="700">
+        <img src="images/The_Great_Wave_off_Kanagawa.jpg" alt="Kanbara" width="1200" height="700">
         <div class="carousel-caption">
           <h1>UNE TRADITION MILLÉNAIRE</h1>
           
