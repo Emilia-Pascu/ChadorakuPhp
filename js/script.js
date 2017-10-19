@@ -348,3 +348,88 @@ function validerFormModifier() {
         return true;
     }
 }
+
+function validerFormCommentaires() {
+    var ck_alpha_num = new RegExp(/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/);
+    var ck_courriel = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i);
+    var ck_comment = new RegExp(/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{10,200}$/);
+    var errors = [];
+    var nom = $('#nom').val();
+    var courriel = $('#courriel').val();
+    var description = $('#description').val();
+
+    if (!ck_alpha_num.test(nom)) {
+        errors[errors.length] = "Entrez un nom valide, entre 3 et 20 caractères";
+    }
+
+    if (!ck_courriel.test(courriel)) {
+        errors[errors.length] = "Entrez une adresse courriel valide";
+    }
+
+    if (!ck_comment.test(description)) {
+        errors[errors.length] = "Entrez un commentaire valide, entre 10 et 200 caractères";
+    }
+
+    if (errors.length > 0) {
+        reportErrors(errors, 'msg');
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function validerFormEnregistrerThe() {
+    var ck_alpha_num = new RegExp(/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/);
+    var ck_prix = new RegExp(/^[0-9]+(?:\.[0-9]+)?$/);
+    var errors = [];
+    var nom = $('#nom').val();
+    var description = $('#description').val();
+    var prix = $('#prix').val();
+
+    if (!ck_alpha_num.test(nom)) {
+        errors[errors.length] = "Entrez un nom de thé valide, entre 3 et 20 caractères";
+    }
+
+    if (description.length < 3) {
+        errors[errors.length] = "Entrez une description de thé valide, entre 3 et 1000 caractères";
+    }
+
+    if (!ck_prix.test(prix)) {
+        errors[errors.length] = "Entrez un prix de thé valide";
+    }
+
+    if (errors.length > 0) {
+        reportErrors(errors, 'msg');
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function validerFormModifierThe() {
+    var ck_alpha_num = new RegExp(/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/);
+    var ck_prix = new RegExp(/^[0-9]+(?:\.[0-9]+)?$/);
+    var errors = [];
+    var nom = $('#nomModifier').val();
+    var description = $('#descriptionModifier').val();
+    var prix = $('#prixModifier').val();
+
+    if (!ck_alpha_num.test(nom)) {
+        errors[errors.length] = "Entrez un nom de thé valide, entre 3 et 20 caractères";
+    }
+
+    if (description.length < 3) {
+        errors[errors.length] = "Entrez une description de thé valide, entre 3 et 1000 caractères";
+    }
+
+    if (!ck_prix.test(prix)) {
+        errors[errors.length] = "Entrez un prix de thé valide";
+    }
+
+    if (errors.length > 0) {
+        reportErrors(errors, 'msg');
+        return false;
+    } else {
+        return true;
+    }
+}
