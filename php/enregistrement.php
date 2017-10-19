@@ -170,106 +170,108 @@
     @mysqli_close($connexion);  
 ?>   
     <div class="container" id="formLogin">
-        <div class="jumbotron" id="jumbo">
+        <div class="jumbotron enregistrement" id="jumbo">
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="panel panel-login">
+                <div>
+                    <div>
+                        <div class="enregistrement">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="col-xs-6">
-                                    <a href="#" class="active" id="login-form-link"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; INFORMATIONS PERSONNELLES</a>
+                                <div class="text-center">
+                                     <h3 class="policeFormulaire">INFORMATIONS PERSONNELLES</h3>
                                 </div>
                             </div>
-                            <hr>
+                            <!-- <hr> -->
                         </div>
                         <div class="panel-body">
                             <div class="row">
                                 <form id="formEnregistrer" name="formEnregistrer" action="" enctype="" method="POST" onSubmit="return validerFormEnregistrer();">
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="courriel"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Courriel</label>
+                                            <label for="courriel" class="policeFormulaire">Courriel</label>
                                             <input class="form-control input-lg" type="email" id="courriel" name="courriel" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label for="nom"> <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Nom</label>
+                                            <label for="nom" class="policeFormulaire"></i>&nbsp; Nom</label>
                                             <input class="form-control input-lg" type="text" id="nom" name="nom" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="motPasse"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Mot de passe</label>
+                                            <label for="motPasse" class="policeFormulaire">Mot de passe</label>
                                             <input class="form-control input-lg" type="password" id="motPasse" name="motPasse" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label for="prenom"> <i class="fa fa-user" aria-hidden="true"></i>&nbsp; Prénom</label>
+                                            <label for="prenom" class="policeFormulaire">Prénom</label>
                                             <input class="form-control input-lg" type="text" id="prenom" name="prenom" value="" required>
                                         </div>
                                     </div>
                                      <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="confMotPasse"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Confirmer mot de passe</label>
+                                            <label for="confMotPasse" class="policeFormulaire">Confirmer mot de passe</label>
                                             <input class="form-control input-lg" type="password" id="confMotPasse" name="confMotPasse" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label for="telephone"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Téléphone</label>
+                                            <label for="telephone" class="policeFormulaire">Téléphone</label>
                                             <input class="form-control input-lg" type="text" id="telephone" name="telephone" value="" required>
                                         </div>                                        
                                     </div>                                    
                                     <div class="col-sm-2 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="appartement">App</label>
+                                            <label for="appartement" class="policeFormulaire">App</label>
                                             <input class="form-control input-lg" type="text" id="appartement" name="appartement" value="">
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label for="noCivique">No</label>
+                                            <label for="noCivique" class="policeFormulaire">No</label>
                                             <input class="form-control input-lg" type="text" id="noCivique" name="noCivique" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label for="rue">Rue</label>
+                                            <label for="rue" class="policeFormulaire">Rue</label>
                                             <input class="form-control input-lg" type="text" id="rue" name="rue" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="ville">Ville</label>
+                                            <label for="ville" class="policeFormulaire">Ville</label>
                                             <input class="form-control input-lg" type="text" id="ville" name="ville" value="" required>
                                         </div>                                        
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label for="province">Province</label>
+                                            <label for="province" class="policeFormulaire">Province</label>
                                             <input class="form-control input-lg" type="text" id="province" name="province" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5 col-sm-offset-1">
                                         <div class="form-group">
-                                            <label for="codePostal">Code postal</label>
+                                            <label for="codePostal" class="policeFormulaire">Code postal</label>
                                             <input class="form-control input-lg" type="text" id="codePostal" name="codePostal" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label for="pays">Pays</label>
+                                            <label for="pays" class="policeFormulaire">Pays</label>
                                             <input class="form-control input-lg" type="text" id="pays" name="pays" value="" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-4 col-sm-offset-4" id="btnEnregistrer">
-                                        <button class="btn btn-primary margin-bottom-none" type="submit" ><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp; S'ENREGISTRER</button>
+                                        <button class="btn btn-primary margin-bottom-none policeFormulaire" type="submit" > S'ENREGISTRER</button>
                                     </div>
                                 </form>                                
                             </div>
-                            <div class="col-sm-12 alert alert-success msg" id="msg"> <?php echo $message;?></div> 
-                        </div>
+                                <div class="col-sm-12 alert alert-success msg" id="msg"> <?php echo $message;?></div> 
+                            </div>
+                        </div>   
                     </div>
                 </div>
             </div>

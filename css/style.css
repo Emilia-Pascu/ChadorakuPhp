@@ -412,6 +412,16 @@ th {
     background: url(../images/Horikiri_Iris_Garden.jpg) no-repeat center;
 }
 
+.enregistrement {
+    background: url(../images/Cerisier.jpeg) no-repeat center;
+}
+
+.policeFormulaire{
+    font-family: 'japonais2';
+    text-transform: uppercase;
+    color: whitesmoke;  
+}
+
 #msgConn {
     color: #555;
     background-color: white;
