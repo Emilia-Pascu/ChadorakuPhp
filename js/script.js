@@ -352,7 +352,6 @@ function validerFormModifier() {
 function validerFormCommentaires() {
     var ck_alpha_num = new RegExp(/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/);
     var ck_courriel = new RegExp(/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i);
-    var ck_comment = new RegExp(/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{10,200}$/);
     var errors = [];
     var nom = $('#nom').val();
     var courriel = $('#courriel').val();
@@ -366,7 +365,7 @@ function validerFormCommentaires() {
         errors[errors.length] = "Entrez une adresse courriel valide";
     }
 
-    if (!ck_comment.test(description)) {
+    if (description.length < 10) {
         errors[errors.length] = "Entrez un commentaire valide, entre 10 et 200 caractères";
     }
 

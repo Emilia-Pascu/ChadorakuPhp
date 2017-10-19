@@ -32,11 +32,7 @@
                         $message .= "Le commentaire est requis<br/>";
                         $isValid = false;
                     } else {
-                        $description = test_input($_POST["description"]);           
-                        if (!preg_match("/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{10,200}$/",$description)) {
-                            $message .= "Entrez le commentaire dans le format spécifié<br/>"; 
-                            $isValid = false;
-                        }
+                        $description = test_input($_POST["description"]);                          
                     }
 	    if($isValid){
             $requete="INSERT INTO commentaire values(0,?,?,?)";
