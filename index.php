@@ -156,17 +156,21 @@
                 <div class="col-sm-6">
                     <h3 class="tpad">SALON DE THÉ</h3>
                     <hr>
-                    <p>Dans un décor typiquement japonais, venez déguster nos thés et découvrir nos plats traditionnels. Notre service, vous accompagne à chaque étape de votre découverte pour vous permettre dans appécier toutes les facettes.</p>
+                    <p>Dans un décor typiquement japonais, venez déguster nos thés et découvrir nos plats traditionnels. 
+                        Notre service, vous accompagne à chaque étape de votre découverte pour vous permettre 
+                        dans appécier toutes les facettes.</p>
                     
                     <h3 class="tpad">ATELIERS DE DÉGUSTATION</h3>
                     <hr>
-                    <p>Quel meilleur moyen de découvrir le monde fascinant des thés du Japon que d'être enseigné par un maître du thé. Dans une ambiance décontractée, partagez vos impressions avec d'autres curieux qui désirent approfondir leur amour du thé.</p>
+                    <p>Quel meilleur moyen de découvrir le monde fascinant des thés du Japon que d'être enseigné par un maître du thé. 
+                        Dans une ambiance décontractée, partagez vos impressions avec d'autres curieux qui désirent approfondir leur amour du thé.</p>
                     
                     <!-- <p><a class="btn btn-large btn-primary" href="#">Voir les détails</a></p> -->
                     <h3 class="tpad">PARLEZ, ON VOUS ÉCOUTE</h3>                   
                     <hr>                     
                     <div>
-                        <p>Un de nos consultants est à votre disposition pour répondre à toute question du lundi au vendredi, entre 8h30 et 18h30 </p>
+                        <p>Un de nos consultants est à votre disposition pour répondre à toute question du lundi au vendredi, 
+                            entre 8h30 et 18h30 </p>
                         <a class="btn btn-large btn-primary" href="php/chat.php">CHAT</a>
                     </div>
                     <hr>  

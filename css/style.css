@@ -403,9 +403,9 @@ th {
 }
 
 #divChat {
-    width: 600px;
+    width: 500px;
     font-family: calibri;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 
 .connexion {
