@@ -1,21 +1,61 @@
 <?php
     session_start(); 
     require_once("BD/connexion.inc.php");
-    require 'layout/headerClient.php';    
-    $message = "";
+    require 'layout/headerClient.php';
 
-    if ( !empty($_POST)) {    
-    global $connexion;
-	$nom=$_POST['nom'];
-    $courriel=$_POST['courriel'];
-    $description=$_POST['description'];	
-	$requete="INSERT INTO commentaire values(0,?,?,?)";
-	$stmt = $connexion->prepare($requete);
-	$stmt->bind_param("sss", $nom,$courriel,$description);
-	$stmt->execute();
-    $message = "Votre message a été bien envoyé.";
-    @mysqli_close($connexion);
-} 
+    global $connexion;    
+    $nom = $courriel = $description = $message = "";
+    $isValid = true;
+
+    if ( !empty($_POST)) {  
+        if (empty($_POST["nom"])) {
+                    $message .= "Le nom est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $nom = test_input($_POST["nom"]);           
+                    if (!preg_match("/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{3,20}$/",$nom)) {
+                        $message .= "Entrez le nom dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                }
+        if (empty($_POST["courriel"])) {
+                    $message .= "Le courriel est requis<br/>";
+                    $isValid = false;
+                } else {
+                    $courriel = test_input($_POST["courriel"]);              
+                    if (!preg_match("/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i",$courriel)) {
+                        $message .= "Entrez le courriel dans le format spécifié<br/>"; 
+                        $isValid = false;
+                    }
+                }    
+        if (empty($_POST["description"])) {
+                        $message .= "Le commentaire est requis<br/>";
+                        $isValid = false;
+                    } else {
+                        $description = test_input($_POST["description"]);           
+                        if (!preg_match("/^[A-Za-zéèîêàâùÂÉÈÊÀÏÎÙ0-9 ]{10,200}$/",$description)) {
+                            $message .= "Entrez le commentaire dans le format spécifié<br/>"; 
+                            $isValid = false;
+                        }
+                    }
+	    if($isValid){
+            $requete="INSERT INTO commentaire values(0,?,?,?)";
+            $stmt = $connexion->prepare($requete);
+            $stmt->bind_param("sss", $nom,$courriel,$description);
+            $stmt->execute();
+            $message = "Votre message a été bien envoyé.";
+        }   
+}
+
+    function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
+    @mysqli_close($connexion); 
+
 ?>   
     <!--<div id="myCarousel" class="carousel slide" data-interval="2000">
         <ol class="carousel-indicators">
@@ -170,7 +210,7 @@
                         <a class="btn btn-large btn-primary" href="php/chat.php">CHAT</a>
                     </div>
                     <hr>  
-                    <form id="formCommentaires" action="" enctype="" method="POST">    
+                    <form id="formCommentaires" action="" enctype="" method="POST" onSubmit="return validerFormCommentaires();">    
                         <div class="row">                 
                             <div class="col-sm-6 form-group">
                                 <label for="nom">Nom</label>
@@ -193,7 +233,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="col-sm-12 alert alert-success msg" > <?php echo $message;?></div>
+                    <div class="col-sm-12 alert alert-success msg" id="msg"> <?php echo $message;?></div>
                 </div>
             </div>
         </div>

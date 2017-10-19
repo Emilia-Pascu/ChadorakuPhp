@@ -35,7 +35,7 @@ strong {
 }
 
 .carousel-caption h1 {
-    color:whitesmoke !important;
+    color: whitesmoke !important;
 }
 
 @media (max-width: 600px) {
@@ -325,7 +325,8 @@ td {
     background-color: grey;
 }
 
-#image {
+#image,
+#imageModifier {
     height: 36px;
     border: none;
     color: #666;
@@ -416,10 +417,10 @@ th {
     background: url(../images/Cerisier.jpeg) no-repeat center;
 }
 
-.policeFormulaire{
+.policeFormulaire {
     font-family: 'japonais2';
     text-transform: uppercase;
-    color: whitesmoke;  
+    color: whitesmoke;
 }
 
 #msgConn {
@@ -428,13 +429,17 @@ th {
     padding: 5px;
 }
 
-#presentation{
+#presentation {
     font-size: 20px;
     font-weight: bold;
 }
 
-.policeMenu{
+.policeMenu {
     font-family: 'japonais2';
     text-transform: uppercase;
     color: white;
+}
+
+#formModifier {
+    padding: 25px;
 }
